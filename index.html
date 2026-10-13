@@ -166,6 +166,54 @@
     transition:transform .18s ease}
   .card-gallery img:hover{transform:scale(1.04) rotate(-1deg)}
   .card-gallery img:only-child{grid-column:1 / -1;height:170px}
+  /* card inline details retired in favor of the modal — kept in DOM for the modal to read */
+  .card .details,.card .expand-pill{display:none}
+
+  /* ---------- modal case study ---------- */
+  .modal-backdrop{position:fixed;inset:0;background:rgba(29,21,12,.62);
+    backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+    display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
+  .modal-backdrop.open{display:flex}
+  .modal-panel{background:var(--card);border:3px solid var(--line);border-radius:26px;
+    box-shadow:10px 10px 0 var(--shadowc);max-width:700px;width:100%;max-height:88vh;
+    overflow-y:auto;position:relative;animation:pop .22s ease}
+  @keyframes pop{from{transform:scale(.94) translateY(12px);opacity:0}to{transform:none;opacity:1}}
+  .modal-close{position:absolute;top:14px;right:14px;z-index:3;width:42px;height:42px;
+    border-radius:50%;background:var(--lime);color:#1D150C;border:2.5px solid var(--line);
+    box-shadow:3px 3px 0 var(--shadowc);font-size:1rem;font-weight:800;cursor:pointer;
+    font-family:'Space Mono';line-height:1}
+  .modal-close:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--shadowc)}
+  .modal-art{min-height:220px;max-height:320px;border-bottom:3px solid var(--line);
+    overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
+  .modal-art img{width:100%;height:100%;max-height:320px;object-fit:cover;display:block}
+  .modal-body{padding:28px 30px 32px}
+  .modal-body h3{font-family:'Anton';font-size:2rem;line-height:1.05;margin-bottom:10px;
+    letter-spacing:.01em}
+  .modal-summary{color:var(--muted);font-size:1rem;margin-bottom:4px}
+  .modal-body .details-inner{border-top:2px dashed var(--line);margin-top:18px;padding-top:18px}
+  .modal-body .details-inner h4{font-family:'Space Mono';font-size:.76rem;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--red);margin:16px 0 8px}
+  .modal-body .details-inner h4:first-child{margin-top:0}
+  .modal-body .details-inner ul{padding-left:20px;color:var(--muted);font-size:.95rem}
+  .modal-body .details-inner li{margin-bottom:8px}
+  .modal-body .card-gallery img{height:150px}
+  .modal-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+  .modal-links .btn{font-size:.92rem;padding:11px 22px}
+
+  /* ---------- experience + tools ---------- */
+  .exp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:18px}
+  .exp-card{background:var(--card);border:2.5px solid var(--line);border-radius:16px;
+    padding:18px;box-shadow:5px 5px 0 var(--shadowc)}
+  .exp-card:nth-child(odd){transform:rotate(-.5deg)}
+  .exp-card:nth-child(even){transform:rotate(.5deg)}
+  .exp-role{font-family:'Anton';font-size:1.02rem;line-height:1.2;margin-bottom:4px}
+  .exp-co{font-family:'Space Mono';font-size:.74rem;font-weight:700;color:var(--red);
+    letter-spacing:.06em;margin-bottom:4px}
+  .exp-dates{font-family:'Space Mono';font-size:.72rem;color:var(--muted)}
+  .tools-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+  .tool-chip{font-family:'Space Mono';font-size:.74rem;font-weight:700;background:var(--lilac);
+    color:#1D150C;border:2px solid var(--line);border-radius:999px;padding:5px 14px;
+    box-shadow:2px 2px 0 var(--shadowc)}
 
   /* ---------- about ---------- */
   .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px}
@@ -232,14 +280,14 @@
         <span class="kicker"><span class="dot">★</span> social media strategist <span class="dot">★</span></span>
         <h1 class="hero-name">BUSHRA<span class="script-name">Yousuf</span></h1>
         <p class="hero-sub">culture shapes social — <span class="hl">and I shape the feed</span></p>
-        <p class="lede">6+ years crafting stories for brands people actually care about, across CPG, beauty, and spirits. I help brands find their voice, grow their audience, and create the kind of social moments that make people stop scrolling.</p>
+        <p class="lede">5+ years crafting stories for brands people actually care about, across CPG, beauty, and spirits. I help brands find their voice, grow their audience, and create the kind of social moments that make people stop scrolling.</p>
         <div class="cta-row">
           <a class="btn btn-lime" href="#work">see the work ↓</a>
           <a class="btn btn-white" href="#contact">work with me</a>
         </div>
       </div>
       <div class="hero-photo-wrap">
-        <div class="burst"><span>6+ yrs of being chronically online</span></div>
+        <div class="burst"><span>5+ yrs of being chronically online</span></div>
         <img class="hero-photo" src="assets/portrait.jpg" alt="Portrait of Bushra Yousuf">
       </div>
     </div>
@@ -266,24 +314,26 @@
       <div class="grid" id="cards">
 
         <!-- Card 1: Marc Jacobs Fragrances -->
-        <article class="card" data-tags="influencer social-first">
+        <article class="card" data-tags="influencer social-first" data-link="https://www.instagram.com/p/DbyPi2PkXJG/" data-link-label="View the Daisy Wild post ↗">
           <div class="card-art"><img src="assets/mjf-perfume.jpg" alt="Marc Jacobs Perfect Absolute perfume"></div>
           <div class="card-body">
             <div class="card-brand">Marc Jacobs Fragrances</div>
             <h3>Creator-led campaigns for launches &amp; evergreen</h3>
-            <p>Ideated, sourced, and launched creator-led campaigns on social for new launches and evergreen content.</p>
+            <p>At Qulture, I own daily publishing and community for Marc Jacobs Fragrances — driving 30%+ engagement growth across Instagram, TikTok, Facebook, and YouTube.</p>
             <div class="tags"><span class="tag">influencer</span><span class="tag">social-first</span></div>
             <div class="details"><div class="details-inner">
               <h4>What I did</h4>
               <ul>
-                <li>Built creator programs around launches like Daisy ESI alongside always-on evergreen content</li>
+                <li>Run editorial calendars end-to-end, aligning influencer partnerships, PR moments, and campaign launches</li>
+                <li>Schedule and optimize content via Sprinklr and Meta Business Suite</li>
+                <li>Develop creator briefs, talent rollout decks, and ambassador guidelines; support shoot planning through post-production reviews</li>
                 <li>Briefed creators on native storytelling formats for the Daisy Wild Eau So Extra launch — in-my-bag moments, flatlays, day-in-my-life</li>
-                <li>Shaped posting cadence and content mix across Instagram, Facebook, and TikTok</li>
               </ul>
               <h4>Highlights</h4>
               <ul>
+                <li>30%+ engagement growth across always-on and campaign content</li>
                 <li>Mother's Day reels and creator videos plus influencer reposts to close out the month</li>
-                <li>Mix of BTS footage, olfactive carousels, and giveaway moments to keep the feed fresh</li>
+                <li>Weekly and monthly performance reports with metrics and optimization recs for brand stakeholders</li>
               </ul>
               <div class="card-gallery">
                 <img src="assets/mjf-flatlay-1.png" alt="Marc Jacobs perfume shelfie styling">
@@ -296,7 +346,7 @@
 
         <!-- Card 2: Johnnie Walker -->
         <article class="card" data-tags="influencer social-first">
-          <div class="card-art"><img src="assets/jw-sabrina-1.png" alt="Sabrina Carpenter for Johnnie Walker Black Label"></div>
+          <div class="card-art"><img src="assets/jw-sabrina-2.png" alt="Sabrina Carpenter holding Johnnie Walker Black Label" style="object-position:center 30%"></div>
           <div class="card-body">
             <div class="card-brand">Johnnie Walker</div>
             <h3>Sabrina Carpenter for Black Label</h3>
@@ -309,7 +359,7 @@
                 <li>Helped the collaboration live natively on social rather than as a traditional ad buy</li>
               </ul>
               <div class="card-gallery">
-                <img src="assets/jw-sabrina-2.png" alt="Sabrina Carpenter holding Johnnie Walker Black Label">
+                <img src="assets/jw-sabrina-1.png" alt="Sabrina Carpenter for Johnnie Walker — 'Here's to making new friends'">
               </div>
               <div class="card-media-note">📹 creator video drops here soon</div>
             </div></div>
@@ -327,13 +377,15 @@
           <div class="card-body">
             <div class="card-brand">Samsung US</div>
             <h3>Community management that joins the conversation</h3>
-            <p>Spotted where the brand could credibly show up — then wrote the comments the internet actually wanted to see.</p>
+            <p>At Ogilvy, I grew Samsung US followers 34% and engagement 21% — by showing up where the brand could credibly join in.</p>
             <div class="tags"><span class="tag">community</span><span class="tag">insights</span></div>
             <div class="details"><div class="details-inner">
               <h4>What I did</h4>
               <ul>
-                <li>Surfaced comment opportunities on influencer and creator posts for the brand to join in real time</li>
-                <li>Drafted response options matched to each moment's tone — playful, helpful, or hype</li>
+                <li>Led real-time community engagement across Instagram, Facebook, TikTok, YouTube, LinkedIn, and Pinterest</li>
+                <li>Cut response time 40% and lifted sentiment 22% through faster, sharper replies</li>
+                <li>Monitored influencer content to spot moments for social amplification</li>
+                <li>Surfaced comment opportunities on creator posts and drafted response options matched to each moment's tone</li>
               </ul>
               <h4>Highlights</h4>
               <ul>
@@ -358,6 +410,8 @@
             <div class="details"><div class="details-inner">
               <h4>What I did</h4>
               <ul>
+                <li>At We Are Social, owned daily publishing and community management for Barilla US</li>
+                <li>Identified emerging platform trends and cultural moments, contributing to 25% ROI growth across campaigns</li>
                 <li>Produced weekly channel highlights for client view — wins, themes, and UGC opportunities</li>
                 <li>Tracked what the community was already posting and folded it back into the brand's story</li>
               </ul>
@@ -401,11 +455,13 @@
           <div class="card-body">
             <div class="card-brand">Reporting &amp; Insights</div>
             <h3>Recaps that tie social to the brand picture</h3>
-            <p>Community management recaps and monthly highlights for client view — celebrating wins and calling out what worked (and what didn't).</p>
+            <p>Social listening and reporting that actually moves decisions — surfacing cultural insights and improving ROI by 22%.</p>
             <div class="tags"><span class="tag">insights</span></div>
             <div class="details"><div class="details-inner">
               <h4>What I did</h4>
               <ul>
+                <li>Run social listening and sentiment analysis in Sprinklr, turning cultural signals into strategy</li>
+                <li>Deliver weekly insights reports via Brandwatch and Meltwater to inform creative and social decisions</li>
                 <li>Built recap decks connecting social performance back to the bigger brand picture</li>
                 <li>Turned posting cadence, content mix, and community signals into clear next steps</li>
               </ul>
@@ -449,7 +505,7 @@
         </article>
 
         <!-- Card 8: Calvin Klein -->
-        <article class="card" data-tags="influencer">
+        <article class="card" data-tags="influencer" data-link="https://www.instagram.com/reel/DYFCkR_uweq/" data-link-label="Watch the euphoria reel ↗">
           <div class="card-art" style="background:linear-gradient(135deg,#3A3A3A,#101010)">
             <span class="big-letter">CK</span>
             <svg class="art-doodle" style="bottom:14px;left:18px" width="40" height="14" viewBox="0 0 100 20" fill="none" stroke="#FFFDF7" stroke-width="6" stroke-linecap="round"><path d="M2 10 Q 12 2, 22 10 T 42 10 T 62 10 T 82 10 T 102 10"/></svg>
@@ -457,14 +513,15 @@
           <div class="card-body">
             <div class="card-brand">Calvin Klein</div>
             <h3>Influencer operations at scale</h3>
-            <p>Ran the influencer engine behind always-on and campaign moments — sourcing, contracting, briefing, and approvals without the chaos.</p>
+            <p>At Qulture, I run daily publishing and community for Calvin Klein Fragrances — the always-on engine behind campaign moments.</p>
             <div class="tags"><span class="tag">influencer</span></div>
             <div class="details"><div class="details-inner">
               <h4>What I did</h4>
               <ul>
-                <li>Owned end-to-end influencer operations for the brand's social programs</li>
-                <li>Built repeatable workflows for talent sourcing, contracting, and content approvals</li>
-                <li>Partnered with regional teams to keep global campaigns locally relevant</li>
+                <li>Own daily publishing and community management across Instagram, Facebook, TikTok, and YouTube</li>
+                <li>Manage editorial calendars end-to-end, aligning influencer partnerships, PR moments, and campaign launches</li>
+                <li>Develop creator briefs and ambassador guidelines for influencer activations</li>
+                <li>Built repeatable workflows for talent sourcing, contracting, and content approvals — no chaos, just output</li>
               </ul>
               <div class="card-media-note">📹 creator video drops here soon</div>
             </div></div>
@@ -534,7 +591,7 @@
       <div class="about-grid">
         <div class="about-card">
           <h3>my <span class="script">philosophy</span></h3>
-          <p>I'm a social media strategist with over 6 years of experience crafting stories for brands that people actually care about. I've worked across CPG, beauty, and spirits — including Samsung US, Marc Jacobs Fragrances, Johnnie Walker, and Barilla — helping brands find their voice, grow their audience, and create social moments that make people stop scrolling.</p>
+          <p>I'm a social media strategist with over 5 years of experience crafting stories for brands that people actually care about. I've worked across CPG, beauty, and spirits — including Samsung US, Marc Jacobs Fragrances, Johnnie Walker, and Barilla — helping brands find their voice, grow their audience, and create social moments that make people stop scrolling.</p>
           <p>The world of social shapes culture, and culture also shapes social. It's how you differentiate yourself that matters the most. I'm energized by the intersection of culture and commerce, and I love making brands feel human online.</p>
           <p style="font-size:.88rem">🎓 George Mason University — Communications &amp; Marketing, graduated with honors · avid TikTok user · film photographer in my free time</p>
         </div>
@@ -548,6 +605,32 @@
             <li>Social listening, recaps &amp; reporting</li>
           </ul>
         </div>
+      </div>
+      <h3 class="anton" style="font-size:1.6rem;margin:34px 0 4px">where i've <span class="script" style="color:var(--red)">been</span></h3>
+      <div class="exp-grid">
+        <div class="exp-card">
+          <div class="exp-role">Social &amp; Community Strategist</div>
+          <div class="exp-co">QULTURE</div>
+          <div class="exp-dates">2024 — now · New York</div>
+        </div>
+        <div class="exp-card">
+          <div class="exp-role">Community Strategist</div>
+          <div class="exp-co">OGILVY</div>
+          <div class="exp-dates">2023 — 2024 · New York</div>
+        </div>
+        <div class="exp-card">
+          <div class="exp-role">Community Manager &amp; Social Media Strategist</div>
+          <div class="exp-co">WE ARE SOCIAL</div>
+          <div class="exp-dates">2022 — 2023 · New York</div>
+        </div>
+        <div class="exp-card">
+          <div class="exp-role">Social Media Manager</div>
+          <div class="exp-co">QAHWA CAFE</div>
+          <div class="exp-dates">2021 — 2022</div>
+        </div>
+      </div>
+      <div class="tools-row">
+        <span class="tool-chip">Sprinklr</span><span class="tool-chip">Meta Business Suite</span><span class="tool-chip">Brandwatch</span><span class="tool-chip">Meltwater</span><span class="tool-chip">CreatorIQ</span><span class="tool-chip">Bazaarvoice</span><span class="tool-chip">Asana</span><span class="tool-chip">CapCut</span>
       </div>
     </div>
   </section>
@@ -580,6 +663,20 @@
   </div>
 </footer>
 
+<div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-label="Case study">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <div class="modal-art" id="modalArt"></div>
+    <div class="modal-body">
+      <div class="card-brand" id="modalBrand"></div>
+      <h3 id="modalTitle"></h3>
+      <p class="modal-summary" id="modalSummary"></p>
+      <div id="modalDetails"></div>
+      <div class="modal-links" id="modalLinks"></div>
+    </div>
+  </div>
+</div>
+
 <script>
   // Duplicate ticker content for a seamless loop
   const track = document.getElementById('tickerTrack');
@@ -611,16 +708,44 @@
     });
   }));
 
-  // Expandable cards — the whole card is clickable
-  function toggleCard(card){
-    const open = card.classList.toggle('open');
-    const details = card.querySelector('.details');
-    const pill = card.querySelector('.expand-pill');
-    details.style.maxHeight = open ? details.scrollHeight + 'px' : '0px';
-    pill.textContent = open ? '– less' : '+ details';
+  // Case-study modal — click any card to open the full story
+  const backdrop = document.getElementById('modalBackdrop');
+  const modalClose = document.getElementById('modalClose');
+  function openModal(card){
+    const artSrc = card.querySelector('.card-art').innerHTML;
+    document.getElementById('modalArt').innerHTML = artSrc;
+    document.getElementById('modalBrand').textContent = card.querySelector('.card-brand').textContent;
+    document.getElementById('modalTitle').textContent = card.querySelector('.card-body h3').textContent;
+    const summaryEl = card.querySelector('.card-body > p');
+    document.getElementById('modalSummary').textContent = summaryEl ? summaryEl.textContent : '';
+    const detailsSrc = card.querySelector('.details-inner');
+    document.getElementById('modalDetails').innerHTML = detailsSrc ? detailsSrc.innerHTML : '';
+    const linksBox = document.getElementById('modalLinks');
+    linksBox.innerHTML = '';
+    if (card.dataset.link){
+      const a = document.createElement('a');
+      a.className = 'btn btn-lime';
+      a.href = card.dataset.link;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = card.dataset.linkLabel || 'View link ↗';
+      linksBox.appendChild(a);
+    }
+    backdrop.classList.add('open');
+    backdrop.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+    backdrop.querySelector('.modal-panel').scrollTop = 0;
   }
+  function closeModal(){
+    backdrop.classList.remove('open');
+    backdrop.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+  modalClose.addEventListener('click', (e) => { e.stopPropagation(); closeModal(); });
+  backdrop.addEventListener('click', (e) => { if (e.target === backdrop) closeModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
   cards.forEach(card => {
-    card.addEventListener('click', () => toggleCard(card));
+    card.addEventListener('click', () => openModal(card));
   });
 
   document.getElementById('year').textContent = new Date().getFullYear();
