@@ -1,0 +1,9 @@
+# macOS / editors
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# keep the folder, ignore nothing inside assets for now
+!assets/
