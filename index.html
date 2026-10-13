@@ -160,6 +160,12 @@
     border-radius:999px;padding:6px 16px;box-shadow:3px 3px 0 var(--shadowc)}
   .card-media-note{margin-top:12px;font-family:'Space Mono';font-size:.72rem;color:var(--muted);
     border:2px dashed var(--line);border-radius:12px;padding:10px 12px;text-align:center}
+  .card-gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+  .card-gallery img{width:100%;height:120px;object-fit:cover;border:2px solid var(--line);
+    border-radius:12px;box-shadow:3px 3px 0 var(--shadowc);cursor:zoom-in;
+    transition:transform .18s ease}
+  .card-gallery img:hover{transform:scale(1.04) rotate(-1deg)}
+  .card-gallery img:only-child{grid-column:1 / -1;height:170px}
 
   /* ---------- about ---------- */
   .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px}
@@ -279,6 +285,10 @@
                 <li>Mother's Day reels and creator videos plus influencer reposts to close out the month</li>
                 <li>Mix of BTS footage, olfactive carousels, and giveaway moments to keep the feed fresh</li>
               </ul>
+              <div class="card-gallery">
+                <img src="assets/mjf-flatlay-1.png" alt="Marc Jacobs perfume shelfie styling">
+                <img src="assets/mjf-flatlay-2.png" alt="Marc Jacobs in-my-bag flatlay">
+              </div>
             </div></div>
             <span class="expand-pill">+ details</span>
           </div>
@@ -286,11 +296,7 @@
 
         <!-- Card 2: Johnnie Walker -->
         <article class="card" data-tags="influencer social-first">
-          <div class="card-art" style="background:linear-gradient(135deg,#E8A93D,#B5442F)">
-            <span class="big-letter">JW</span>
-            <svg class="art-doodle" style="top:14px;right:16px" width="34" height="34" viewBox="0 0 24 24" fill="#FFFDF7"><path d="M12 1 L14.2 9.8 L23 12 L14.2 14.2 L12 23 L9.8 14.2 L1 12 L9.8 9.8 Z"/></svg>
-            <svg class="art-doodle" style="bottom:12px;left:18px" width="26" height="26" viewBox="0 0 24 24" fill="#FFFDF7"><path d="M12 1 L14.2 9.8 L23 12 L14.2 14.2 L12 23 L9.8 14.2 L1 12 L9.8 9.8 Z"/></svg>
-          </div>
+          <div class="card-art"><img src="assets/jw-sabrina-1.png" alt="Sabrina Carpenter for Johnnie Walker Black Label"></div>
           <div class="card-body">
             <div class="card-brand">Johnnie Walker</div>
             <h3>Sabrina Carpenter for Black Label</h3>
@@ -302,6 +308,9 @@
                 <li>Supported the launch of the brand's biggest celebrity partnership to date</li>
                 <li>Helped the collaboration live natively on social rather than as a traditional ad buy</li>
               </ul>
+              <div class="card-gallery">
+                <img src="assets/jw-sabrina-2.png" alt="Sabrina Carpenter holding Johnnie Walker Black Label">
+              </div>
               <div class="card-media-note">📹 creator video drops here soon</div>
             </div></div>
             <span class="expand-pill">+ details</span>
@@ -363,10 +372,7 @@
 
         <!-- Card 5: Pride 2025 -->
         <article class="card" data-tags="social-first community">
-          <div class="card-art" style="background:linear-gradient(135deg,#F78FB3,#F5D547 35%,#7ED491 65%,#7FB2F0)">
-            <span class="big-letter">P</span>
-            <svg class="art-doodle" style="bottom:12px;right:16px" width="34" height="34" viewBox="0 0 24 24" fill="#FFFDF7"><path d="M12 1 L14.2 9.8 L23 12 L14.2 14.2 L12 23 L9.8 14.2 L1 12 L9.8 9.8 Z"/></svg>
-          </div>
+          <div class="card-art"><img src="assets/pride-2025.png" alt="Pride 2025 campaign with Marc Jacobs Daisy"></div>
           <div class="card-body">
             <div class="card-brand">Pride 2025</div>
             <h3>Showing up for a cultural moment</h3>
@@ -377,7 +383,6 @@
               <ul>
                 <li>Developed social creative for Pride 2025</li>
               </ul>
-              <div class="card-media-note">📸 campaign visuals drop here soon</div>
             </div></div>
             <span class="expand-pill">+ details</span>
           </div>
@@ -429,6 +434,7 @@
                 <li>Built and ran the seeding engine for Portraits, Portraits Intense, and Halfeti</li>
                 <li>Sourced and vetted 100+ UK creators on engagement rate and audience footprint before matching scents to personas</li>
                 <li>Managed outreach, opt-ins, gifting logistics, and brand approval rounds end to end</li>
+                <li>Wrote creator briefs for new collection launches — conversational, social-native content guidance with clear do's and don'ts, tagging, and disclosure</li>
               </ul>
               <h4>Highlights</h4>
               <ul>
