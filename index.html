@@ -162,12 +162,12 @@
     border:2px dashed var(--line);border-radius:12px;padding:10px 12px;text-align:center}
   .card-art.tall-art{height:340px}
   .card-gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
-  .card-gallery img{width:100%;height:170px;object-fit:cover;border:2px solid var(--line);
+  .card-gallery img{width:100%;height:210px;object-fit:cover;border:2px solid var(--line);
     border-radius:12px;box-shadow:3px 3px 0 var(--shadowc);cursor:zoom-in;
     transition:transform .18s ease}
-  .card-gallery video{width:100%;height:170px;object-fit:cover;border:2px solid var(--line);border-radius:12px;background:#000}
+  .card-gallery video{width:100%;height:210px;object-fit:cover;border:2px solid var(--line);border-radius:12px;background:#000}
   .card-gallery img:hover{transform:scale(1.04) rotate(-1deg)}
-  .card-gallery img:only-child{grid-column:1 / -1;height:170px}
+  .card-gallery img:only-child{grid-column:1 / -1;height:210px}
   /* card inline details retired in favor of the modal — kept in DOM for the modal to read */
   .card .details,.card .expand-pill{display:none}
 
@@ -185,9 +185,9 @@
     box-shadow:3px 3px 0 var(--shadowc);font-size:1rem;font-weight:800;cursor:pointer;
     font-family:'Space Mono';line-height:1}
   .modal-close:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--shadowc)}
-  .modal-art{min-height:280px;max-height:480px;border-bottom:3px solid var(--line);
+  .modal-art{min-height:340px;max-height:580px;border-bottom:3px solid var(--line);
     overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
-  .modal-art img{width:100%;height:100%;max-height:480px;object-fit:cover;display:block}
+  .modal-art img{width:100%;height:100%;max-height:580px;object-fit:cover;display:block}
   .modal-body{padding:28px 30px 32px}
   .modal-body h3{font-family:'Anton';font-size:2rem;line-height:1.05;margin-bottom:10px;
     letter-spacing:.01em}
@@ -321,7 +321,7 @@
 
         <!-- Card 1: Daisy Wild Eau So Extra campaign -->
         <article class="card" data-tags="influencer social-first" data-link="https://www.instagram.com/p/DbyPi2PkXJG/" data-link-label="View the Daisy Wild post ↗" data-link-thumb="assets/thumbs/daisy-1.jpg" data-link2="https://www.instagram.com/reel/Dbvqa50RjRK/" data-link-label2="Watch the Daisy Wild reel ↗" data-link-thumb2="assets/thumbs/daisy-2.jpg" data-link3="https://www.instagram.com/reel/DbtHFCexX3E/" data-link-label3="Daisy mille-feuilles collab ↗" data-link-thumb3="assets/thumbs/daisy-3.jpg" data-link4="https://www.instagram.com/reel/Db8UT_uDVOE/" data-link-label4="Summer flavors collab ↗" data-link-thumb4="assets/thumbs/daisy-4.jpg">
-          <div class="card-art"><img src="assets/thumbs/daisy-1.jpg" alt="Daisy Wild Eau So Extra green bottle with flowers"></div>
+          <div class="card-art tall-art"><img src="assets/thumbs/daisy-1.jpg" alt="Daisy Wild Eau So Extra green bottle with flowers"></div>
           <div class="card-body">
             <div class="card-brand">Marc Jacobs Fragrances</div>
             <h3>Daisy Wild Eau So Extra — end-to-end campaign</h3>
@@ -350,7 +350,7 @@
         </article>
         <!-- Card 2: Perfect Absolute campaign -->
         <article class="card" data-tags="influencer social-first">
-          <div class="card-art"><img src="assets/mjf-flatlay-1.png" alt="Perfect Absolute red bottle shelfie flatlay"></div>
+          <div class="card-art tall-art"><img src="assets/mjf-flatlay-1.png" alt="Perfect Absolute red bottle shelfie flatlay"></div>
           <div class="card-body">
             <div class="card-brand">Marc Jacobs Fragrances</div>
             <h3>Perfect Absolute — creator launch content</h3>
@@ -518,7 +518,7 @@
 
         <!-- Card 7: Penhaligon's -->
         <article class="card" data-tags="influencer insights" data-link="https://www.tiktok.com/t/ZTyvdjqxD/" data-link-thumb="assets/thumbs/pen-1.jpg" data-link-label="Watch the Duchess Rose unboxing ↗" data-link2="https://www.tiktok.com/t/ZTyvdPdvw/" data-link-thumb2="assets/thumbs/pen-2.jpg" data-link-label2="Watch the Portraits reveal ↗" data-link3="https://www.tiktok.com/t/ZTyvdUsSg/" data-link-thumb3="assets/thumbs/pen-3.jpg" data-link-label3="Watch the Vra Vra Vroom review ↗" data-link4="https://www.tiktok.com/t/ZTyvR5GsT/" data-link-thumb4="assets/thumbs/pen-4.jpg" data-link-label4="Portraits sponsored edit ↗" data-link5="https://www.tiktok.com/t/ZTyvRaYat/" data-link-thumb5="assets/thumbs/pen-5.jpg" data-link-label5="Mr. Sam paid partnership ↗">
-          <div class="card-art"><img src="assets/penhaligons-dandy.jpg" alt="Penhaligon's A London Dandy perfume"></div>
+          <div class="card-art tall-art"><img src="assets/penhaligons-dandy.jpg" alt="Penhaligon's A London Dandy perfume"></div>
           <div class="card-body">
             <div class="card-brand">Penhaligon's</div>
             <h3>Influencer seeding for a heritage fragrance house</h3>
@@ -547,10 +547,7 @@
 
         <!-- Card 8: Calvin Klein -->
         <article class="card" data-tags="influencer" data-link="https://www.instagram.com/reel/DYFCkR_uweq/" data-link-thumb="assets/thumbs/ck-1.jpg" data-link-label="Watch the euphoria reel ↗" data-link2="https://www.tiktok.com/t/ZTyvdUUXr/" data-link-thumb2="assets/thumbs/ck-2.jpg" data-link-label2="Watch on TikTok ↗" data-link3="https://www.tiktok.com/@ninonrambaud/video/7613463817728707862" data-link-thumb3="assets/thumbs/ck-3.jpg" data-link-label3="Euphoria Elixirs collab ↗" data-link4="https://www.tiktok.com/t/ZTyvRbjs5/" data-link-thumb4="assets/thumbs/ck-4.jpg" data-link-label4="Euphoria Ulta collab ↗" data-link5="https://www.tiktok.com/t/ZTyvRGXs2/" data-link-thumb5="assets/thumbs/ck-5.jpg" data-link-label5="Euphoria NYFW moment ↗" data-link6="https://www.tiktok.com/t/ZTyvRfq6s/" data-link-thumb6="assets/thumbs/ck-6.jpg" data-link-label6="Euphoria vanilla edit ↗" data-link7="https://www.tiktok.com/t/ZTyvRW4MT/" data-link-thumb7="assets/thumbs/ck-7.jpg" data-link-label7="Euphoria confidence edit ↗">
-          <div class="card-art" style="background:linear-gradient(135deg,#3A3A3A,#101010)">
-            <span class="big-letter">CK</span>
-            <svg class="art-doodle" style="bottom:14px;left:18px" width="40" height="14" viewBox="0 0 100 20" fill="none" stroke="#FFFDF7" stroke-width="6" stroke-linecap="round"><path d="M2 10 Q 12 2, 22 10 T 42 10 T 62 10 T 82 10 T 102 10"/></svg>
-          </div>
+          <div class="card-art tall-art"><img src="assets/thumbs/ck-1.jpg" alt="Creator holding Calvin Klein Euphoria"></div>
           <div class="card-body">
             <div class="card-brand">Calvin Klein</div>
             <h3>Influencer operations at scale</h3>
