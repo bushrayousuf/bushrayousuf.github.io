@@ -3,340 +3,536 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bushra Yousuf — Social &amp; Influencer Marketing</title>
-<meta name="description" content="Portfolio of Bushra Yousuf: influencer programs, social-first campaigns, community and insights work for global brands.">
+<title>Bushra Yousuf — Social Media Strategist</title>
+<meta name="description" content="Portfolio of Bushra Yousuf, social media strategist: influencer programs, social-first campaigns, community and insights for global brands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Parisienne&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#faf9f7; --surface:#ffffff; --surface-2:#f1efeB;
-    --text:#191817; --muted:#6b675f; --border:#e5e1d8;
-    --accent:#b3402e; --accent-soft:rgba(179,64,46,.08);
-    --shadow:0 10px 30px rgba(25,24,23,.08);
-    --radius:18px;
+    --bg:#F5EFE3; --bg2:#EDE3D0; --card:#FFFDF7;
+    --line:#1D150C; --shadowc:#1D150C;
+    --text:#1D150C; --muted:#6E5F4B;
+    --lime:#CDF3B8; --pink:#F6C9DA; --red:#B5442F; --gold:#D9A62E; --lilac:#CDBCF2; --sky:#BFE0F5;
+    --radius:20px;
   }
   html[data-theme="dark"]{
-    --bg:#141312; --surface:#1d1c1a; --surface-2:#262422;
-    --text:#f2efe9; --muted:#a8a29a; --border:#33302b;
-    --accent:#e0684f; --accent-soft:rgba(224,104,79,.12);
-    --shadow:0 10px 30px rgba(0,0,0,.35);
+    --bg:#231828; --bg2:#2D2033; --card:#2E2138;
+    --line:#F5EFE3; --shadowc:#000000;
+    --text:#F5EFE3; --muted:#C9BBA6;
+    --lime:#CDF3B8; --pink:#F6C9DA; --red:#E0684F; --gold:#D9A62E; --lilac:#CDBCF2; --sky:#BFE0F5;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{
-    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  body{font-family:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
     background:var(--bg);color:var(--text);line-height:1.6;
-    transition:background .3s ease,color .3s ease;
-  }
-  ::selection{background:var(--accent);color:#fff}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+    transition:background .3s ease,color .3s ease;overflow-x:hidden}
+  ::selection{background:var(--lime);color:#1D150C}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .anton{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.01em}
+  .script{font-family:'Parisienne',cursive}
+  .mono{font-family:'Space Mono',monospace}
 
   /* ---------- nav ---------- */
-  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);
-    background:color-mix(in srgb,var(--bg) 82%,transparent);
-    border-bottom:1px solid var(--border)}
+  nav{position:sticky;top:0;z-index:50;background:var(--bg);
+    border-bottom:2.5px solid var(--line)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;
-    max-width:1080px;margin:0 auto;padding:14px 24px}
-  .brand{font-weight:800;letter-spacing:-.02em;font-size:1.05rem;text-decoration:none;color:var(--text)}
-  .brand span{color:var(--accent)}
-  .nav-links{display:flex;gap:22px;align-items:center}
-  .nav-links a{color:var(--muted);text-decoration:none;font-size:.92rem;font-weight:500}
-  .nav-links a:hover{color:var(--text)}
-  .theme-btn{border:1px solid var(--border);background:var(--surface);color:var(--text);
-    border-radius:999px;padding:7px 14px;font-size:.85rem;cursor:pointer;font-weight:600}
-  .theme-btn:hover{border-color:var(--accent)}
+    max-width:1120px;margin:0 auto;padding:12px 24px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
+  .logo-chip{font-family:'Anton';background:var(--lime);color:#1D150C;border:2.5px solid var(--line);
+    border-radius:12px;padding:4px 10px;font-size:1rem;box-shadow:3px 3px 0 var(--shadowc)}
+  .logo-name{font-family:'Space Mono';font-weight:700;font-size:.85rem;letter-spacing:.06em}
+  .nav-links{display:flex;gap:20px;align-items:center}
+  .nav-links a{font-family:'Space Mono';font-size:.82rem;font-weight:700;color:var(--text);
+    text-decoration:none;letter-spacing:.05em}
+  .nav-links a:hover{color:var(--red)}
+  .theme-btn{font-family:'Space Mono';font-weight:700;font-size:.85rem;cursor:pointer;
+    background:var(--pink);color:#1D150C;border:2.5px solid var(--line);border-radius:999px;
+    padding:6px 14px;box-shadow:3px 3px 0 var(--shadowc);transition:transform .12s ease,box-shadow .12s ease}
+  .theme-btn:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--shadowc)}
 
   /* ---------- hero ---------- */
-  .hero{padding:96px 0 56px}
-  .eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--accent);margin-bottom:18px}
-  h1{font-size:clamp(2.6rem,7vw,4.8rem);line-height:1.04;letter-spacing:-.03em;font-weight:800;margin-bottom:20px}
-  h1 em{font-style:normal;color:var(--accent)}
-  .lede{font-size:1.15rem;color:var(--muted);max-width:640px;margin-bottom:34px}
-  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
-  .btn{display:inline-block;padding:12px 24px;border-radius:999px;font-weight:700;
-    font-size:.95rem;text-decoration:none;transition:transform .15s ease}
-  .btn:hover{transform:translateY(-2px)}
-  .btn-primary{background:var(--accent);color:#fff}
-  .btn-ghost{border:1px solid var(--border);color:var(--text);background:var(--surface)}
+  .hero{position:relative;padding:72px 0 64px;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  @media(max-width:820px){.hero-grid{grid-template-columns:1fr}}
+  .kicker{display:inline-block;font-family:'Space Mono';font-size:.78rem;font-weight:700;
+    letter-spacing:.22em;text-transform:uppercase;background:var(--card);
+    border:2.5px solid var(--line);border-radius:999px;padding:7px 16px;
+    box-shadow:4px 4px 0 var(--shadowc);margin-bottom:22px}
+  .kicker .dot{color:var(--red)}
+  h1.hero-name{font-family:'Anton';font-size:clamp(3.4rem,9vw,6.2rem);line-height:.95;
+    letter-spacing:.01em;position:relative;margin-bottom:6px}
+  h1.hero-name .script-name{font-family:'Parisienne';font-weight:400;color:var(--red);
+    font-size:clamp(3rem,7.5vw,5.2rem);display:block;transform:rotate(-4deg);
+    margin-top:-.35em;margin-left:.6em}
+  .hero-sub{font-family:'Space Mono';font-size:.95rem;font-weight:700;letter-spacing:.08em;
+    margin:18px 0 14px;text-transform:uppercase}
+  .hero-sub .hl{background:var(--lime);color:#1D150C;padding:2px 8px;border:2px solid var(--line);
+    border-radius:8px;box-shadow:2px 2px 0 var(--shadowc);white-space:nowrap}
+  .lede{font-size:1.05rem;color:var(--muted);max-width:520px;margin-bottom:30px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;font-family:'Anton';font-size:1.02rem;letter-spacing:.05em;
+    text-transform:uppercase;text-decoration:none;padding:13px 26px;border-radius:14px;
+    border:2.5px solid var(--line);box-shadow:5px 5px 0 var(--shadowc);
+    transition:transform .12s ease,box-shadow .12s ease;cursor:pointer}
+  .btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--shadowc)}
+  .btn:active{transform:translate(5px,5px);box-shadow:0 0 0 var(--shadowc)}
+  .btn-lime{background:var(--lime);color:#1D150C}
+  .btn-white{background:var(--card);color:var(--text)}
+  .hero-photo-wrap{position:relative;justify-self:center;width:min(340px,80%)}
+  .hero-photo{width:100%;aspect-ratio:4/5;object-fit:cover;border:3px solid var(--line);
+    border-radius:26px;box-shadow:9px 9px 0 var(--shadowc);transform:rotate(-2.5deg);
+    background:var(--bg2);transition:transform .25s ease}
+  .hero-photo-wrap:hover .hero-photo{transform:rotate(0deg) scale(1.02)}
+  .burst{position:absolute;top:-28px;right:-24px;width:118px;height:118px;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    transform:rotate(12deg);z-index:2}
+  .burst::before,.burst::after{content:"";position:absolute;inset:0;background:var(--red);
+    border:2.5px solid var(--line)}
+  .burst::after{transform:rotate(45deg)}
+  .burst span{position:relative;z-index:1;font-family:'Space Mono';font-weight:700;
+    font-size:.68rem;line-height:1.25;color:#FFFDF7;max-width:76px}
+  .doodle{position:absolute;pointer-events:none;z-index:1}
+  .doodle svg{display:block}
+  .float-slow{animation:floaty 5s ease-in-out infinite}
+  @keyframes floaty{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(6deg)}}
+
+  /* ---------- ticker ---------- */
+  .ticker{background:var(--line);color:var(--lime);overflow:hidden;white-space:nowrap;
+    border-top:2.5px solid var(--line);border-bottom:2.5px solid var(--line);padding:12px 0}
+  html[data-theme="dark"] .ticker{background:#000;color:var(--lime)}
+  .ticker-track{display:inline-block;animation:tick 26s linear infinite;
+    font-family:'Anton';font-size:1.15rem;letter-spacing:.06em}
+  .ticker-track span{margin:0 18px}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
   /* ---------- sections ---------- */
-  section{padding:56px 0}
-  .sec-head{margin-bottom:28px}
-  .sec-head h2{font-size:1.9rem;letter-spacing:-.02em;font-weight:800;margin-bottom:8px}
-  .sec-head p{color:var(--muted);max-width:640px}
+  section{padding:64px 0}
+  .sec-label{font-family:'Space Mono';font-size:.8rem;font-weight:700;letter-spacing:.24em;
+    text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  .sec-title{font-family:'Anton';font-size:clamp(2.2rem,5vw,3.4rem);line-height:1;
+    margin-bottom:8px}
+  .sec-title .script{color:var(--red);font-size:.85em}
+  .sec-sub{color:var(--muted);max-width:620px;margin-bottom:28px}
 
   /* ---------- filters ---------- */
-  .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
-  .filter{border:1px solid var(--border);background:var(--surface);color:var(--muted);
-    border-radius:999px;padding:9px 18px;font-size:.88rem;font-weight:600;cursor:pointer;
-    transition:all .18s ease}
-  .filter:hover{border-color:var(--accent);color:var(--text)}
-  .filter.active{background:var(--text);border-color:var(--text);color:var(--bg)}
-  html[data-theme="dark"] .filter.active{background:var(--text);color:var(--bg)}
+  .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+  .filter{font-family:'Space Mono';font-weight:700;font-size:.8rem;letter-spacing:.04em;
+    background:var(--card);color:var(--text);border:2.5px solid var(--line);
+    border-radius:999px;padding:8px 18px;cursor:pointer;box-shadow:3px 3px 0 var(--shadowc);
+    transition:all .13s ease}
+  .filter:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--shadowc)}
+  .filter.active{background:var(--line);color:var(--bg)}
 
   /* ---------- cards ---------- */
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
-  .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
-    padding:26px;box-shadow:var(--shadow);display:flex;flex-direction:column;
-    transition:transform .2s ease,opacity .25s ease}
-  .card:hover{transform:translateY(-4px)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px}
+  .card{background:var(--card);border:2.5px solid var(--line);border-radius:var(--radius);
+    box-shadow:7px 7px 0 var(--shadowc);overflow:hidden;cursor:pointer;
+    transition:transform .16s ease,box-shadow .16s ease;display:flex;flex-direction:column}
+  .card:hover{transform:translate(-2px,-2px);box-shadow:10px 10px 0 var(--shadowc)}
   .card.hidden{display:none}
-  .card-brand{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-    color:var(--accent);margin-bottom:10px}
-  .card h3{font-size:1.28rem;letter-spacing:-.015em;margin-bottom:10px;font-weight:750}
-  .card p{color:var(--muted);font-size:.94rem;margin-bottom:14px}
-  .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
-  .tag{font-size:.74rem;font-weight:700;background:var(--accent-soft);color:var(--accent);
-    border-radius:999px;padding:4px 11px;letter-spacing:.02em}
+  .card-art{position:relative;height:168px;border-bottom:2.5px solid var(--line);
+    overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .card-art img{width:100%;height:100%;object-fit:cover;display:block;
+    transition:transform .3s ease}
+  .card:hover .card-art img{transform:scale(1.05)}
+  .card-art .big-letter{font-family:'Anton';font-size:5.2rem;color:rgba(255,253,247,.92);
+    text-shadow:3px 3px 0 rgba(29,21,12,.35);position:relative;z-index:1}
+  .card-art .art-doodle{position:absolute;z-index:2;opacity:.95}
+  .card-body{padding:22px 22px 20px;display:flex;flex-direction:column;flex:1}
+  .card-brand{font-family:'Space Mono';font-size:.72rem;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--red);margin-bottom:8px}
+  .card h3{font-family:'Anton';font-size:1.35rem;line-height:1.12;margin-bottom:10px;
+    letter-spacing:.01em}
+  .card p{color:var(--muted);font-size:.93rem;margin-bottom:14px}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:4px}
+  .tag{font-family:'Space Mono';font-size:.7rem;font-weight:700;background:transparent;
+    color:var(--text);border:2px solid var(--line);border-radius:999px;padding:3px 11px}
   .details{overflow:hidden;max-height:0;transition:max-height .35s ease}
-  .details-inner{padding-top:12px;border-top:1px dashed var(--border);margin-top:12px}
-  .details-inner h4{font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;
-    color:var(--muted);margin:14px 0 6px}
+  .details-inner{padding-top:14px;border-top:2px dashed var(--line);margin-top:14px}
+  .details-inner h4{font-family:'Space Mono';font-size:.74rem;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--red);margin:14px 0 6px}
   .details-inner h4:first-child{margin-top:0}
-  .details-inner ul{padding-left:18px;color:var(--muted);font-size:.92rem}
+  .details-inner ul{padding-left:18px;color:var(--muted);font-size:.9rem}
   .details-inner li{margin-bottom:6px}
-  .expand-btn{margin-top:auto;align-self:flex-start;background:none;border:none;
-    color:var(--accent);font-weight:700;font-size:.9rem;cursor:pointer;padding:8px 0 0}
-  .expand-btn::after{content:" +";font-weight:800}
-  .card.open .expand-btn::after{content:" –"}
+  .expand-pill{margin-top:16px;align-self:flex-start;font-family:'Space Mono';font-weight:700;
+    font-size:.78rem;background:var(--lime);color:#1D150C;border:2px solid var(--line);
+    border-radius:999px;padding:6px 16px;box-shadow:3px 3px 0 var(--shadowc)}
+  .card-media-note{margin-top:12px;font-family:'Space Mono';font-size:.72rem;color:var(--muted);
+    border:2px dashed var(--line);border-radius:12px;padding:10px 12px;text-align:center}
 
   /* ---------- about ---------- */
-  .about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
-  @media(max-width:760px){.about-grid{grid-template-columns:1fr}}
-  .about-card{background:var(--surface);border:1px solid var(--border);
-    border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
-  .about-card h3{margin-bottom:12px;font-size:1.15rem}
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px}
+  @media(max-width:820px){.about-grid{grid-template-columns:1fr}}
+  .about-card{background:var(--card);border:2.5px solid var(--line);border-radius:var(--radius);
+    padding:30px;box-shadow:7px 7px 0 var(--shadowc);position:relative}
+  .about-card:nth-child(1){transform:rotate(-.6deg)}
+  .about-card:nth-child(2){transform:rotate(.6deg);background:var(--lime)}
+  html[data-theme="dark"] .about-card:nth-child(2){background:#3A4A2E}
+  .about-card:nth-child(2) h3,.about-card:nth-child(2) .caps li{color:#1D150C}
+  html[data-theme="dark"] .about-card:nth-child(2) h3,
+  html[data-theme="dark"] .about-card:nth-child(2) .caps li{color:var(--text)}
+  .about-card h3{font-family:'Anton';font-size:1.5rem;margin-bottom:14px;letter-spacing:.02em}
+  .about-card h3 .script{color:var(--red)}
   .about-card p{color:var(--muted);font-size:.96rem;margin-bottom:12px}
-  .caps{list-style:none}
-  .caps li{padding:10px 0;border-bottom:1px solid var(--border);font-size:.95rem}
+  .about-card:nth-child(2) p{color:#1D150C}
+  html[data-theme="dark"] .about-card:nth-child(2) p{color:var(--text)}
+  .caps{list-style:none;margin-top:6px}
+  .caps li{padding:9px 0;border-bottom:2px solid rgba(29,21,12,.18);font-size:.93rem;font-weight:600}
   .caps li:last-child{border-bottom:none}
-  .caps li::before{content:"→ ";color:var(--accent);font-weight:800}
+  .caps li::before{content:"✦ ";color:var(--red);font-weight:800}
 
   /* ---------- contact ---------- */
-  .contact-box{background:var(--text);color:var(--bg);border-radius:calc(var(--radius) + 6px);
-    padding:48px 40px;text-align:center}
-  html[data-theme="dark"] .contact-box{background:var(--surface-2)}
-  .contact-box h2{font-size:clamp(1.6rem,4vw,2.4rem);letter-spacing:-.02em;margin-bottom:12px}
-  .contact-box p{opacity:.75;margin-bottom:26px;max-width:520px;margin-left:auto;margin-right:auto}
-  .contact-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-  .contact-links .btn-ghost{background:transparent;color:inherit;border-color:currentColor}
+  .contact-box{background:var(--card);border:3px solid var(--line);border-radius:28px;
+    box-shadow:9px 9px 0 var(--shadowc);padding:56px 40px;text-align:center;position:relative;
+    overflow:hidden}
+  .contact-box h2{font-family:'Anton';font-size:clamp(2rem,5vw,3.2rem);line-height:1;margin-bottom:6px}
+  .contact-box h2 .script{color:var(--red)}
+  .contact-box>p{color:var(--muted);margin-bottom:28px}
+  .contact-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
 
-  footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:.85rem}
-  footer a{color:var(--accent);text-decoration:none}
+  footer{padding:36px 0 48px;text-align:center;color:var(--muted);
+    font-family:'Space Mono';font-size:.78rem}
+  footer a{color:var(--red);text-decoration:none;font-weight:700}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <a class="brand" href="#top">Bushra<span>&nbsp;Yousuf</span></a>
+    <a class="logo" href="#top"><span class="logo-chip">BY</span><span class="logo-name">bushra yousuf</span></a>
     <div class="nav-links">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <button class="theme-btn" id="themeToggle" aria-label="Toggle dark mode">◐</button>
+      <a href="#work">work</a>
+      <a href="#about">about</a>
+      <a href="#contact">contact</a>
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle dark mode">◐ theme</button>
     </div>
   </div>
 </nav>
 
-<div class="wrap" id="top">
-
+<div id="top">
   <header class="hero">
-    <span class="eyebrow">Social Media Strategist · Portfolio</span>
-    <h1>Culture <em>shapes</em> social.</h1>
-    <p class="lede">I'm Bushra Yousuf — a social media strategist with 6+ years of experience crafting stories for brands people actually care about, across CPG, beauty, and spirits. I help brands find their voice, grow their audience, and create the kind of social moments that make people stop scrolling.</p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="#work">See the work</a>
-      <a class="btn btn-ghost" href="#contact">Work with me</a>
-      <!-- TODO: add your resume PDF to assets/ and link it here -->
-      <!-- <a class="btn btn-ghost" href="assets/Bushra-Yousuf-Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a> -->
+    <div class="doodle float-slow" style="top:60px;left:6%">
+      <svg width="46" height="46" viewBox="0 0 24 24" fill="#D9A62E" stroke="#1D150C" stroke-width="1"><path d="M12 1 L14.2 9.8 L23 12 L14.2 14.2 L12 23 L9.8 14.2 L1 12 L9.8 9.8 Z"/></svg>
+    </div>
+    <div class="doodle float-slow" style="bottom:70px;left:44%;animation-delay:1.2s">
+      <svg width="70" height="22" viewBox="0 0 100 20" fill="none" stroke="#B5442F" stroke-width="5" stroke-linecap="round"><path d="M2 10 Q 12 2, 22 10 T 42 10 T 62 10 T 82 10 T 102 10"/></svg>
+    </div>
+    <div class="doodle float-slow" style="top:120px;right:8%;animation-delay:2s">
+      <svg width="38" height="38" viewBox="0 0 24 24" fill="#F6C9DA" stroke="#1D150C" stroke-width="1"><path d="M12 1 L14.2 9.8 L23 12 L14.2 14.2 L12 23 L9.8 14.2 L1 12 L9.8 9.8 Z"/></svg>
+    </div>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker"><span class="dot">★</span> social media strategist <span class="dot">★</span></span>
+        <h1 class="hero-name">BUSHRA<span class="script-name">Yousuf</span></h1>
+        <p class="hero-sub">culture shapes social — <span class="hl">and I shape the feed</span></p>
+        <p class="lede">6+ years crafting stories for brands people actually care about, across CPG, beauty, and spirits. I help brands find their voice, grow their audience, and create the kind of social moments that make people stop scrolling.</p>
+        <div class="cta-row">
+          <a class="btn btn-lime" href="#work">see the work ↓</a>
+          <a class="btn btn-white" href="#contact">work with me</a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="burst"><span>6+ yrs of being chronically online</span></div>
+        <img class="hero-photo" src="assets/portrait.jpg" alt="Portrait of Bushra Yousuf">
+      </div>
     </div>
   </header>
 
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="tickerTrack">
+      <span>CULTURE SHAPES SOCIAL</span><span>✦</span><span>INFLUENCER MARKETING</span><span>✦</span><span>COMMUNITY BUILDING</span><span>✦</span><span>SOCIAL-FIRST CAMPAIGNS</span><span>✦</span><span>BRANDS THAT FEEL HUMAN</span><span>✦</span>
+    </div>
+  </div>
+
   <section id="work">
-    <div class="sec-head">
-      <h2>Selected work</h2>
-      <p>Filter by discipline, then expand any card for the full story. Campaign visuals coming soon — this page is text-first for now.</p>
-    </div>
-    <div class="filters" id="filters">
-      <button class="filter active" data-filter="all">All</button>
-      <button class="filter" data-filter="influencer">Influencer</button>
-      <button class="filter" data-filter="social-first">Social-first</button>
-      <button class="filter" data-filter="community">Community</button>
-      <button class="filter" data-filter="insights">Insights</button>
-    </div>
-    <div class="grid" id="cards">
+    <div class="wrap">
+      <p class="sec-label">01 · selected work</p>
+      <h2 class="sec-title">THE <span class="script">good</span> STUFF</h2>
+      <p class="sec-sub">Tap any card to open the full story. Filter by discipline — campaign visuals and creator videos dropping in soon.</p>
+      <div class="filters" id="filters">
+        <button class="filter active" data-filter="all">all</button>
+        <button class="filter" data-filter="influencer">influencer</button>
+        <button class="filter" data-filter="social-first">social-first</button>
+        <button class="filter" data-filter="community">community</button>
+        <button class="filter" data-filter="insights">insights</button>
+      </div>
+      <div class="grid" id="cards">
 
-      <!-- Card 1 -->
-      <article class="card" data-tags="influencer social-first">
-        <div class="card-brand">Marc Jacobs Fragrances</div>
-        <h3>Creator-led campaigns for launches &amp; evergreen</h3>
-        <p>Ideated, sourced, and launched creator-led campaigns on social for new launches and evergreen content.</p>
-        <div class="tags"><span class="tag">Influencer</span><span class="tag">Social-first</span></div>
-        <div class="details"><div class="details-inner">
-          <h4>What I did</h4>
-          <ul>
-            <li>Built creator programs around launches like Daisy ESI alongside always-on evergreen content</li>
-            <li>Shaped posting cadence and content mix across Instagram, Facebook, and TikTok</li>
-          </ul>
-          <h4>Highlights</h4>
-          <ul>
-            <li>Mother's Day reels and creator videos (Iwana, Ashe) plus influencer reposts to close out the month</li>
-            <li>Mix of BTS footage, olfactive carousels, and giveaway moments to keep the feed fresh</li>
-          </ul>
-        </div></div>
-        <button class="expand-btn">Details</button>
-      </article>
+        <!-- Card 1: Marc Jacobs Fragrances -->
+        <article class="card" data-tags="influencer social-first">
+          <div class="card-art"><img src="assets/mjf-perfume.jpg" alt="Marc Jacobs Perfect Absolute perfume"></div>
+          <div class="card-body">
+            <div class="card-brand">Marc Jacobs Fragrances</div>
+            <h3>Creator-led campaigns for launches &amp; evergreen</h3>
+            <p>Ideated, sourced, and launched creator-led campaigns on social for new launches and evergreen content.</p>
+            <div class="tags"><span class="tag">influencer</span><span class="tag">social-first</span></div>
+            <div class="details"><div class="details-inner">
+              <h4>What I did</h4>
+              <ul>
+                <li>Built creator programs around launches like Daisy ESI alongside always-on evergreen content</li>
+                <li>Briefed creators on native storytelling formats for the Daisy Wild Eau So Extra launch — in-my-bag moments, flatlays, day-in-my-life</li>
+                <li>Shaped posting cadence and content mix across Instagram, Facebook, and TikTok</li>
+              </ul>
+              <h4>Highlights</h4>
+              <ul>
+                <li>Mother's Day reels and creator videos plus influencer reposts to close out the month</li>
+                <li>Mix of BTS footage, olfactive carousels, and giveaway moments to keep the feed fresh</li>
+              </ul>
+            </div></div>
+            <span class="expand-pill">+ details</span>
+          </div>
+        </article>
 
-      <!-- Card 2 -->
-      <article class="card" data-tags="influencer social-first">
-        <div class="card-brand">Johnnie Walker</div>
-        <h3>Sabrina Carpenter for Black Label</h3>
-        <p>The biggest celebrity partnership with Johnnie Walker — a culture-defining music collaboration built for social.</p>
-        <div class="tags"><span class="tag">Influencer</span><span class="tag">Social-first</span></div>
-        <div class="details"><div class="details-inner">
-          <h4>What I did</h4>
-          <ul>
-            <li>Supported the launch of the brand's biggest celebrity partnership to date</li>
-            <li>Helped the collaboration live natively on social rather than as a traditional ad buy</li>
-          </ul>
-          <h4>Highlights</h4>
-          <ul><li><em>Add campaign visuals, press, and results here.</em></li></ul>
-        </div></div>
-        <button class="expand-btn">Details</button>
-      </article>
+        <!-- Card 2: Johnnie Walker -->
+        <article class="card" data-tags="influencer social-first">
+          <div class="card-art" style="background:linear-gradient(135deg,#E8A93D,#B5442F)">
+            <span class="big-letter">JW</span>
+            <svg class="art-doodle" style="top:14px;right:16px" width="34" height="34" viewBox="0 0 24 24" fill="#FFFDF7"><path d="M12 1 L14.2 9.8 L23 12 L14.2 14.2 L12 23 L9.8 14.2 L1 12 L9.8 9.8 Z"/></svg>
+            <svg class="art-doodle" style="bottom:12px;left:18px" width="26" height="26" viewBox="0 0 24 24" fill="#FFFDF7"><path d="M12 1 L14.2 9.8 L23 12 L14.2 14.2 L12 23 L9.8 14.2 L1 12 L9.8 9.8 Z"/></svg>
+          </div>
+          <div class="card-body">
+            <div class="card-brand">Johnnie Walker</div>
+            <h3>Sabrina Carpenter for Black Label</h3>
+            <p>The biggest celebrity partnership with Johnnie Walker — a culture-defining music collaboration built for social.</p>
+            <div class="tags"><span class="tag">influencer</span><span class="tag">social-first</span></div>
+            <div class="details"><div class="details-inner">
+              <h4>What I did</h4>
+              <ul>
+                <li>Supported the launch of the brand's biggest celebrity partnership to date</li>
+                <li>Helped the collaboration live natively on social rather than as a traditional ad buy</li>
+              </ul>
+              <div class="card-media-note">📹 creator video drops here soon</div>
+            </div></div>
+            <span class="expand-pill">+ details</span>
+          </div>
+        </article>
 
-      <!-- Card 3 -->
-      <article class="card" data-tags="community insights">
-        <div class="card-brand">Samsung US</div>
-        <h3>Community management that joins the conversation</h3>
-        <p>Spotted where the brand could credibly show up — then wrote the comments the internet actually wanted to see.</p>
-        <div class="tags"><span class="tag">Community</span><span class="tag">Insights</span></div>
-        <div class="details"><div class="details-inner">
-          <h4>What I did</h4>
-          <ul>
-            <li>Surfaced comment opportunities on influencer and creator posts for the brand to join in real time</li>
-            <li>Drafted response options matched to each moment's tone — playful, helpful, or hype</li>
-          </ul>
-          <h4>Highlights</h4>
-          <ul>
-            <li>Martha Stewart's Frame TV and martini-fridge posts: "Martha-tinis," Art Mode explainers, and collab-of-a-lifetime energy</li>
-          </ul>
-        </div></div>
-        <button class="expand-btn">Details</button>
-      </article>
+        <!-- Card 3: Samsung US -->
+        <article class="card" data-tags="community insights">
+          <div class="card-art" style="background:linear-gradient(135deg,#7FB2F0,#2B4ACB)">
+            <span class="big-letter">S</span>
+            <svg class="art-doodle" style="top:16px;left:20px" width="40" height="14" viewBox="0 0 100 20" fill="none" stroke="#FFFDF7" stroke-width="6" stroke-linecap="round"><path d="M2 10 Q 12 2, 22 10 T 42 10 T 62 10 T 82 10 T 102 10"/></svg>
+            <svg class="art-doodle" style="bottom:14px;right:18px" width="30" height="30" viewBox="0 0 24 24" fill="#FFFDF7"><path d="M12 1 L14.2 9.8 L23 12 L14.2 14.2 L12 23 L9.8 14.2 L1 12 L9.8 9.8 Z"/></svg>
+          </div>
+          <div class="card-body">
+            <div class="card-brand">Samsung US</div>
+            <h3>Community management that joins the conversation</h3>
+            <p>Spotted where the brand could credibly show up — then wrote the comments the internet actually wanted to see.</p>
+            <div class="tags"><span class="tag">community</span><span class="tag">insights</span></div>
+            <div class="details"><div class="details-inner">
+              <h4>What I did</h4>
+              <ul>
+                <li>Surfaced comment opportunities on influencer and creator posts for the brand to join in real time</li>
+                <li>Drafted response options matched to each moment's tone — playful, helpful, or hype</li>
+              </ul>
+              <h4>Highlights</h4>
+              <ul>
+                <li>Martha Stewart's Frame TV and martini-fridge posts: "Martha-tinis," Art Mode explainers, and collab-of-a-lifetime energy</li>
+              </ul>
+            </div></div>
+            <span class="expand-pill">+ details</span>
+          </div>
+        </article>
 
-      <!-- Card 4 -->
-      <article class="card" data-tags="community">
-        <div class="card-brand">Barilla</div>
-        <h3>Weekly community roundups</h3>
-        <p>A standing community ritual: celebrating the week's best brand moments and turning tags into UGC.</p>
-        <div class="tags"><span class="tag">Community</span></div>
-        <div class="details"><div class="details-inner">
-          <h4>What I did</h4>
-          <ul>
-            <li>Produced weekly channel highlights for client view — wins, themes, and UGC opportunities</li>
-            <li>Tracked what the community was already posting and folded it back into the brand's story</li>
-          </ul>
-          <h4>Highlights</h4>
-          <ul>
-            <li>"Cozy Meals" week: cold-weather cooking content the community was already making, amplified by the brand</li>
-          </ul>
-        </div></div>
-        <button class="expand-btn">Details</button>
-      </article>
+        <!-- Card 4: Barilla -->
+        <article class="card" data-tags="community">
+          <div class="card-art" style="background:linear-gradient(135deg,#D94F3D,#7A1F1F)">
+            <span class="big-letter">B</span>
+            <svg class="art-doodle" style="top:14px;right:20px" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#FFFDF7" stroke-width="2.5"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="10" r="1.4" fill="#FFFDF7"/><circle cx="15" cy="10" r="1.4" fill="#FFFDF7"/><path d="M8 14 Q12 17.5 16 14" stroke-linecap="round"/></svg>
+          </div>
+          <div class="card-body">
+            <div class="card-brand">Barilla</div>
+            <h3>Weekly community roundups</h3>
+            <p>A standing community ritual: celebrating the week's best brand moments and turning tags into UGC.</p>
+            <div class="tags"><span class="tag">community</span></div>
+            <div class="details"><div class="details-inner">
+              <h4>What I did</h4>
+              <ul>
+                <li>Produced weekly channel highlights for client view — wins, themes, and UGC opportunities</li>
+                <li>Tracked what the community was already posting and folded it back into the brand's story</li>
+              </ul>
+              <h4>Highlights</h4>
+              <ul>
+                <li>"Cozy Meals" week: cold-weather cooking content the community was already making, amplified by the brand</li>
+              </ul>
+            </div></div>
+            <span class="expand-pill">+ details</span>
+          </div>
+        </article>
 
-      <!-- Card 5 -->
-      <article class="card" data-tags="social-first community">
-        <div class="card-brand">Pride 2025</div>
-        <h3>Showing up for a cultural moment</h3>
-        <p>Social-first creative for Pride 2025 — built to celebrate, not just to post.</p>
-        <div class="tags"><span class="tag">Social-first</span><span class="tag">Community</span></div>
-        <div class="details"><div class="details-inner">
-          <h4>What I did</h4>
-          <ul>
-            <li>Developed social creative for Pride 2025</li>
-          </ul>
-          <h4>Highlights</h4>
-          <ul><li><em>Add visuals and results here.</em></li></ul>
-        </div></div>
-        <button class="expand-btn">Details</button>
-      </article>
+        <!-- Card 5: Pride 2025 -->
+        <article class="card" data-tags="social-first community">
+          <div class="card-art" style="background:linear-gradient(135deg,#F78FB3,#F5D547 35%,#7ED491 65%,#7FB2F0)">
+            <span class="big-letter">P</span>
+            <svg class="art-doodle" style="bottom:12px;right:16px" width="34" height="34" viewBox="0 0 24 24" fill="#FFFDF7"><path d="M12 1 L14.2 9.8 L23 12 L14.2 14.2 L12 23 L9.8 14.2 L1 12 L9.8 9.8 Z"/></svg>
+          </div>
+          <div class="card-body">
+            <div class="card-brand">Pride 2025</div>
+            <h3>Showing up for a cultural moment</h3>
+            <p>Social-first creative for Pride 2025 — built to celebrate, not just to post.</p>
+            <div class="tags"><span class="tag">social-first</span><span class="tag">community</span></div>
+            <div class="details"><div class="details-inner">
+              <h4>What I did</h4>
+              <ul>
+                <li>Developed social creative for Pride 2025</li>
+              </ul>
+              <div class="card-media-note">📸 campaign visuals drop here soon</div>
+            </div></div>
+            <span class="expand-pill">+ details</span>
+          </div>
+        </article>
 
-      <!-- Card 6 -->
-      <article class="card" data-tags="insights">
-        <div class="card-brand">Reporting &amp; Insights</div>
-        <h3>Recaps that tie social to the brand picture</h3>
-        <p>Community management recaps and monthly highlights for client view — celebrating wins and calling out what worked (and what didn't).</p>
-        <div class="tags"><span class="tag">Insights</span></div>
-        <div class="details"><div class="details-inner">
-          <h4>What I did</h4>
-          <ul>
-            <li>Built recap decks connecting social performance back to the bigger brand picture</li>
-            <li>Turned posting cadence, content mix, and community signals into clear next steps</li>
-          </ul>
-          <h4>Highlights</h4>
-          <ul>
-            <li>Monthly summaries tracking cadence shifts (e.g. 2–3x/week to focused creator pushes) and what drove them</li>
-          </ul>
-        </div></div>
-        <button class="expand-btn">Details</button>
-      </article>
+        <!-- Card 6: Reporting & Insights -->
+        <article class="card" data-tags="insights">
+          <div class="card-art" style="background:linear-gradient(135deg,#CDBCF2,#8E7BD8)">
+            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" stroke="#FFFDF7" stroke-width="5" stroke-linecap="round">
+              <line x1="14" y1="58" x2="14" y2="34"/><line x1="30" y1="58" x2="30" y2="22"/>
+              <line x1="46" y1="58" x2="46" y2="40"/><line x1="62" y1="58" x2="62" y2="14"/>
+              <line x1="8" y1="58" x2="68" y2="58"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <div class="card-brand">Reporting &amp; Insights</div>
+            <h3>Recaps that tie social to the brand picture</h3>
+            <p>Community management recaps and monthly highlights for client view — celebrating wins and calling out what worked (and what didn't).</p>
+            <div class="tags"><span class="tag">insights</span></div>
+            <div class="details"><div class="details-inner">
+              <h4>What I did</h4>
+              <ul>
+                <li>Built recap decks connecting social performance back to the bigger brand picture</li>
+                <li>Turned posting cadence, content mix, and community signals into clear next steps</li>
+              </ul>
+              <h4>Highlights</h4>
+              <ul>
+                <li>Monthly summaries tracking cadence shifts (e.g. 2–3x/week to focused creator pushes) and what drove them</li>
+              </ul>
+            </div></div>
+            <span class="expand-pill">+ details</span>
+          </div>
+        </article>
 
+        <!-- Card 7: Penhaligon's -->
+        <article class="card" data-tags="influencer insights">
+          <div class="card-art" style="background:linear-gradient(135deg,#2A5240,#0E1F16)">
+            <span class="big-letter" style="color:#E9CE8F">P</span>
+            <svg class="art-doodle" style="top:14px;right:18px" width="30" height="30" viewBox="0 0 24 24" fill="#E9CE8F"><path d="M12 1 L14.2 9.8 L23 12 L14.2 14.2 L12 23 L9.8 14.2 L1 12 L9.8 9.8 Z"/></svg>
+          </div>
+          <div class="card-body">
+            <div class="card-brand">Penhaligon's</div>
+            <h3>Influencer seeding for a heritage fragrance house</h3>
+            <p>Ran end-to-end influencer seeding for the Portraits collection across the UK — sourcing, vetting, outreach, gifting, and brand approvals.</p>
+            <div class="tags"><span class="tag">influencer</span><span class="tag">insights</span></div>
+            <div class="details"><div class="details-inner">
+              <h4>What I did</h4>
+              <ul>
+                <li>Built and ran the seeding engine for Portraits, Portraits Intense, and Halfeti</li>
+                <li>Sourced and vetted 100+ UK creators on engagement rate and audience footprint before matching scents to personas</li>
+                <li>Managed outreach, opt-ins, gifting logistics, and brand approval rounds end to end</li>
+              </ul>
+              <h4>Highlights</h4>
+              <ul>
+                <li>Creator-first matching across the collection — from Duchess Rose to Lord George to Halfeti</li>
+              </ul>
+            </div></div>
+            <span class="expand-pill">+ details</span>
+          </div>
+        </article>
+
+        <!-- Card 8: Calvin Klein -->
+        <article class="card" data-tags="influencer">
+          <div class="card-art" style="background:linear-gradient(135deg,#3A3A3A,#101010)">
+            <span class="big-letter">CK</span>
+            <svg class="art-doodle" style="bottom:14px;left:18px" width="40" height="14" viewBox="0 0 100 20" fill="none" stroke="#FFFDF7" stroke-width="6" stroke-linecap="round"><path d="M2 10 Q 12 2, 22 10 T 42 10 T 62 10 T 82 10 T 102 10"/></svg>
+          </div>
+          <div class="card-body">
+            <div class="card-brand">Calvin Klein</div>
+            <h3>Influencer operations at scale</h3>
+            <p>Ran the influencer engine behind always-on and campaign moments — sourcing, contracting, briefing, and approvals without the chaos.</p>
+            <div class="tags"><span class="tag">influencer</span></div>
+            <div class="details"><div class="details-inner">
+              <h4>What I did</h4>
+              <ul>
+                <li>Owned end-to-end influencer operations for the brand's social programs</li>
+                <li>Built repeatable workflows for talent sourcing, contracting, and content approvals</li>
+                <li>Partnered with regional teams to keep global campaigns locally relevant</li>
+              </ul>
+              <div class="card-media-note">📹 creator video drops here soon</div>
+            </div></div>
+            <span class="expand-pill">+ details</span>
+          </div>
+        </article>
+
+      </div>
     </div>
   </section>
 
   <section id="about">
-    <div class="sec-head">
-      <h2>About</h2>
-      <p>The short version of how I work.</p>
-    </div>
-    <div class="about-grid">
-      <div class="about-card">
-        <h3>Philosophy</h3>
-        <p>I'm a social media strategist with over 6 years of experience crafting stories for brands that people actually care about. I've worked across CPG, beauty, and spirits — including Samsung US, Marc Jacobs Fragrances, Johnnie Walker, and Barilla — helping brands find their voice, grow their audience, and create social moments that make people stop scrolling.</p>
-        <p>The world of social shapes culture, and culture also shapes social. It's how you differentiate yourself that matters the most. I'm energized by the intersection of culture and commerce, and I love making brands feel human online.</p>
-      </div>
-      <div class="about-card">
-        <h3>Capabilities</h3>
-        <ul class="caps">
-          <li>Social strategy for global brands</li>
-          <li>Creator-led campaigns &amp; talent partnerships</li>
-          <li>Community management &amp; engagement</li>
-          <li>Social listening, recaps &amp; reporting</li>
-          <li>Social-first content for launches &amp; evergreen</li>
-        </ul>
+    <div class="wrap">
+      <p class="sec-label">02 · about</p>
+      <h2 class="sec-title">HI, I'M <span class="script">Bushra!</span></h2>
+      <p class="sec-sub">The short version of how I work.</p>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>my <span class="script">philosophy</span></h3>
+          <p>I'm a social media strategist with over 6 years of experience crafting stories for brands that people actually care about. I've worked across CPG, beauty, and spirits — including Samsung US, Marc Jacobs Fragrances, Johnnie Walker, and Barilla — helping brands find their voice, grow their audience, and create social moments that make people stop scrolling.</p>
+          <p>The world of social shapes culture, and culture also shapes social. It's how you differentiate yourself that matters the most. I'm energized by the intersection of culture and commerce, and I love making brands feel human online.</p>
+        </div>
+        <div class="about-card">
+          <h3>what i <span class="script">do best</span></h3>
+          <ul class="caps">
+            <li>Social strategy for global brands</li>
+            <li>Creator-led campaigns &amp; talent partnerships</li>
+            <li>Influencer seeding &amp; operations</li>
+            <li>Community management &amp; engagement</li>
+            <li>Social listening, recaps &amp; reporting</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="contact">
-    <div class="contact-box">
-      <h2>Let's collaborate.</h2>
-      <p>Open to full-time roles and freelance projects in social and influencer marketing.</p>
-      <div class="contact-links">
-        <a class="btn btn-primary" href="mailto:bushra.yousuf@gmail.com">bushra.yousuf@gmail.com</a>
-        <a class="btn btn-ghost" href="tel:+17034169901">703-416-9901</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/bushrayousuf/" target="_blank" rel="noopener">LinkedIn</a>
+    <div class="wrap">
+      <p class="sec-label">03 · say hi</p>
+      <div class="contact-box">
+        <div class="doodle float-slow" style="top:24px;left:32px">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="#D9A62E"><path d="M12 1 L14.2 9.8 L23 12 L14.2 14.2 L12 23 L9.8 14.2 L1 12 L9.8 9.8 Z"/></svg>
+        </div>
+        <div class="doodle float-slow" style="bottom:26px;right:36px;animation-delay:1.5s">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="#F6C9DA" stroke="#1D150C" stroke-width="1"><path d="M12 1 L14.2 9.8 L23 12 L14.2 14.2 L12 23 L9.8 14.2 L1 12 L9.8 9.8 Z"/></svg>
+        </div>
+        <h2><span class="script">Let's</span> COLLABORATE</h2>
+        <p>Open to full-time roles and freelance projects in social and influencer marketing.</p>
+        <div class="contact-links">
+          <a class="btn btn-lime" href="mailto:bushra.yousuf@gmail.com">✉ email me</a>
+          <a class="btn btn-white" href="tel:+17034169901">☎ 703-416-9901</a>
+          <a class="btn btn-white" href="https://www.linkedin.com/in/bushrayousuf/" target="_blank" rel="noopener">linkedin →</a>
+        </div>
       </div>
     </div>
   </section>
-
 </div>
 
 <footer>
   <div class="wrap">
-    © <span id="year"></span> Bushra Yousuf · Built with care, hosted on GitHub Pages
+    © <span id="year"></span> Bushra Yousuf · made with ✦ and too much time online
   </div>
 </footer>
 
 <script>
+  // Duplicate ticker content for a seamless loop
+  const track = document.getElementById('tickerTrack');
+  track.innerHTML += track.innerHTML;
+
   // Theme: respect system preference, remember choice
   const root = document.documentElement;
   const toggle = document.getElementById('themeToggle');
   const saved = localStorage.getItem('theme');
   if (saved) root.dataset.theme = saved;
   else if (window.matchMedia('(prefers-color-scheme: dark)').matches) root.dataset.theme = 'dark';
-  toggle.addEventListener('click', () => {
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
     root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
     localStorage.setItem('theme', root.dataset.theme);
   });
@@ -344,7 +540,8 @@
   // Filters
   const filters = document.querySelectorAll('.filter');
   const cards = document.querySelectorAll('.card');
-  filters.forEach(btn => btn.addEventListener('click', () => {
+  filters.forEach(btn => btn.addEventListener('click', (e) => {
+    e.stopPropagation();
     filters.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     const f = btn.dataset.filter;
@@ -354,15 +551,16 @@
     });
   }));
 
-  // Expandable details
-  document.querySelectorAll('.card').forEach(card => {
-    const btn = card.querySelector('.expand-btn');
+  // Expandable cards — the whole card is clickable
+  function toggleCard(card){
+    const open = card.classList.toggle('open');
     const details = card.querySelector('.details');
-    btn.addEventListener('click', () => {
-      const open = card.classList.toggle('open');
-      details.style.maxHeight = open ? details.scrollHeight + 'px' : '0px';
-      btn.textContent = open ? 'Less' : 'Details';
-    });
+    const pill = card.querySelector('.expand-pill');
+    details.style.maxHeight = open ? details.scrollHeight + 'px' : '0px';
+    pill.textContent = open ? '– less' : '+ details';
+  }
+  cards.forEach(card => {
+    card.addEventListener('click', () => toggleCard(card));
   });
 
   document.getElementById('year').textContent = new Date().getFullYear();
