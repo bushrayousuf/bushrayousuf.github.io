@@ -161,6 +161,10 @@
   .card-media-note{margin-top:12px;font-family:'Space Mono';font-size:.72rem;color:var(--muted);
     border:2px dashed var(--line);border-radius:12px;padding:10px 12px;text-align:center}
   .card-art.tall-art{height:340px}
+  .card-art.bottle-art{height:460px;background:#141414}
+  .card-art.bottle-art img{object-fit:contain}
+  .modal-art.bottle{background:#141414}
+  .modal-art.bottle img{object-fit:contain}
   .card-gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
   .card-gallery img{width:100%;height:210px;object-fit:cover;border:2px solid var(--line);
     border-radius:12px;box-shadow:3px 3px 0 var(--shadowc);cursor:zoom-in;
@@ -319,9 +323,9 @@
       </div>
       <div class="grid" id="cards">
 
-        <!-- Card 1: Daisy Wild Eau So Extra campaign -->
+                <!-- Card 1: Daisy Wild Eau So Extra campaign -->
         <article class="card" data-tags="influencer social-first" data-link="https://www.instagram.com/p/DbyPi2PkXJG/" data-link-label="View the Daisy Wild post ↗" data-link-thumb="assets/thumbs/daisy-1.jpg" data-link2="https://www.instagram.com/reel/Dbvqa50RjRK/" data-link-label2="Watch the Daisy Wild reel ↗" data-link-thumb2="assets/thumbs/daisy-2.jpg" data-link3="https://www.instagram.com/reel/DbtHFCexX3E/" data-link-label3="Daisy mille-feuilles collab ↗" data-link-thumb3="assets/thumbs/daisy-3.jpg" data-link4="https://www.instagram.com/reel/Db8UT_uDVOE/" data-link-label4="Summer flavors collab ↗" data-link-thumb4="assets/thumbs/daisy-4.jpg">
-          <div class="card-art tall-art"><img src="assets/thumbs/daisy-1.jpg" alt="Daisy Wild Eau So Extra green bottle with flowers"></div>
+          <div class="card-art tall-art bottle-art"><img src="assets/daisy-wild-bag.jpg" alt="Daisy Wild Eau So Extra bottle with daisy caps"></div>
           <div class="card-body">
             <div class="card-brand">Marc Jacobs Fragrances</div>
             <h3>Daisy Wild Eau So Extra — end-to-end campaign</h3>
@@ -343,13 +347,12 @@
               <div class="card-gallery">
                 <img src="assets/thumbs/daisy-2.jpg" alt="Daisy Wild Eau So Extra taste-test reel">
                 <img src="assets/thumbs/daisy-3.jpg" alt="Daisy Wild Eau So Extra mille-feuilles collab">
-                <video controls muted playsinline preload="metadata" src="assets/mjf-remarcable.mp4"></video>
                 <video controls muted playsinline preload="metadata" src="assets/mjf-wild-animation.mp4"></video>
               </div>
             </div></div>
           </div>
         </article>
-        <!-- Card 2: Perfect Absolute campaign -->
+                <!-- Card 2: Perfect Absolute campaign -->
         <article class="card" data-tags="influencer social-first">
           <div class="card-art tall-art"><img src="assets/mjf-flatlay-1.png" alt="Perfect Absolute red bottle shelfie flatlay"></div>
           <div class="card-body">
@@ -379,7 +382,7 @@
           </div>
         </article>
 
-        <!-- Card 2: Johnnie Walker -->
+                <!-- Card 3: Johnnie Walker -->
         <article class="card" data-tags="influencer social-first">
           <div class="card-art tall-art"><img src="assets/jw-sabrina-face.png" alt="Sabrina Carpenter holding Johnnie Walker Black Label"></div>
           <div class="card-body">
@@ -411,66 +414,7 @@
           </div>
         </article>
 
-        <!-- Card 3: Samsung US -->
-        <article class="card" data-tags="community insights">
-          <div class="card-art"><img src="assets/samsung-highlights.png" alt="Samsung community management highlights — December"></div>
-          <div class="card-body">
-            <div class="card-brand">Samsung US</div>
-            <h3>Community management that joins the conversation</h3>
-            <p>At Ogilvy, I grew Samsung US followers 34% and engagement 21% — by showing up where the brand could credibly join in.</p>
-            <div class="tags"><span class="tag">community</span><span class="tag">insights</span></div>
-            <div class="details"><div class="details-inner">
-              <h4>What I did</h4>
-              <ul>
-                <li>Led real-time community engagement across Instagram, Facebook, TikTok, YouTube, LinkedIn, and Pinterest</li>
-                <li>Cut response time 40% and lifted sentiment 22% through faster, sharper replies</li>
-                <li>Monitored influencer content to spot moments for social amplification</li>
-                <li>Surfaced comment opportunities on creator posts and drafted response options matched to each moment's tone</li>
-              </ul>
-              <h4>Highlights</h4>
-              <ul>
-                <li>Martha Stewart's Frame TV and martini-fridge posts: "Martha-tinis," Art Mode explainers, and collab-of-a-lifetime energy</li>
-                <li>91 bespoke community engagements in December alone — including the 28.2K-like Victoria Beckham moment</li>
-              </ul>
-              <div class="card-gallery">
-                <img src="assets/samsung-cm-options.png" alt="Samsung community management comment options for Martha Stewart posts">
-              </div>
-            </div></div>
-            <span class="expand-pill">+ details</span>
-          </div>
-        </article>
-
-        <!-- Card 4: Barilla -->
-        <article class="card" data-tags="community">
-          <div class="card-art"><img src="assets/barilla-roundup-cozy.png" alt="Barilla Weekly Roundup — Cozy Meals week"></div>
-          <div class="card-body">
-            <div class="card-brand">Barilla</div>
-            <h3>Weekly community roundups</h3>
-            <p>A standing community ritual: celebrating the week's best brand moments and turning tags into UGC.</p>
-            <div class="tags"><span class="tag">community</span></div>
-            <div class="details"><div class="details-inner">
-              <h4>What I did</h4>
-              <ul>
-                <li>At We Are Social, owned daily publishing and community management for Barilla US</li>
-                <li>Identified emerging platform trends and cultural moments, contributing to 25% ROI growth across campaigns</li>
-                <li>Produced weekly channel highlights for client view — wins, themes, and UGC opportunities</li>
-                <li>Tracked what the community was already posting and folded it back into the brand's story</li>
-              </ul>
-              <h4>Highlights</h4>
-              <ul>
-                <li>"Cozy Meals" week: cold-weather cooking content the community was already making, amplified by the brand</li>
-                <li>"Tortellini Tot" week: a TikToker cooking for 100+ college kids posted in a matching Barilla onesie — and DM'd asking to buy one</li>
-              </ul>
-              <div class="card-gallery">
-                <img src="assets/barilla-roundup-tortellini.png" alt="Barilla Weekly Roundup — Tortellini Tot week">
-                <img src="assets/barilla-top-content.png" alt="Barilla top performing content by platform">
-              </div>
-            </div></div>
-            <span class="expand-pill">+ details</span>
-          </div>
-        </article>
-
-        <!-- Card 5: Pride campaigns -->
+                <!-- Card 4: Pride campaigns -->
         <article class="card" data-tags="social-first community">
           <div class="card-art tall-art"><img src="assets/mjf-perfect-cherry.png" alt="Perfect Marc Jacobs Pride — cherry truck"></div>
           <div class="card-body">
@@ -497,7 +441,58 @@
           </div>
         </article>
 
-        <!-- Card 6: Reporting & Insights -->
+                <!-- Card 5: Penhaligon's -->
+        <article class="card" data-tags="influencer insights" data-link="https://www.tiktok.com/t/ZTyvdjqxD/" data-link-thumb="assets/thumbs/pen-1.jpg" data-link-label="Watch the Duchess Rose unboxing ↗" data-link2="https://www.tiktok.com/t/ZTyvdPdvw/" data-link-thumb2="assets/thumbs/pen-2.jpg" data-link-label2="Watch the Portraits reveal ↗" data-link3="https://www.tiktok.com/t/ZTyvdUsSg/" data-link-thumb3="assets/thumbs/pen-3.jpg" data-link-label3="Watch the Vra Vra Vroom review ↗" data-link4="https://www.tiktok.com/t/ZTyvR5GsT/" data-link-thumb4="assets/thumbs/pen-4.jpg" data-link-label4="Portraits sponsored edit ↗" data-link5="https://www.tiktok.com/t/ZTyvRaYat/" data-link-thumb5="assets/thumbs/pen-5.jpg" data-link-label5="Mr. Sam paid partnership ↗">
+          <div class="card-art tall-art bottle-art"><img src="assets/penhaligons-dandy.jpg" alt="Penhaligon's A London Dandy perfume"></div>
+          <div class="card-body">
+            <div class="card-brand">Penhaligon's</div>
+            <h3>Influencer seeding for a heritage fragrance house</h3>
+            <p>Ran end-to-end influencer seeding for the Portraits collection across the UK — sourcing, vetting, outreach, gifting, and brand approvals.</p>
+            <div class="tags"><span class="tag">influencer</span><span class="tag">insights</span></div>
+            <div class="details"><div class="details-inner">
+              <h4>What I did</h4>
+              <ul>
+                <li>Built and ran the seeding engine for Portraits, Portraits Intense, and Halfeti</li>
+                <li>Sourced and vetted 100+ UK creators on engagement rate and audience footprint before matching scents to personas</li>
+                <li>Managed outreach, opt-ins, gifting logistics, and brand approval rounds end to end</li>
+                <li>Wrote creator briefs for new collection launches — conversational, social-native content guidance with clear do's and don'ts, tagging, and disclosure</li>
+              </ul>
+              <h4>Highlights</h4>
+              <ul>
+                <li>Creator-first matching across the collection — from Duchess Rose to Lord George to Halfeti</li>
+              </ul>
+              <div class="card-gallery">
+                <img src="assets/penhaligons-cut-1.jpg" alt="Penhaligon's The Cut perfume">
+                <img src="assets/penhaligons-cut-2.jpg" alt="Penhaligon's The Cut perfume product shot">
+              </div>
+            </div></div>
+            <span class="expand-pill">+ details</span>
+          </div>
+        </article>
+
+                <!-- Card 6: Calvin Klein -->
+        <article class="card" data-tags="influencer" data-link="https://www.instagram.com/reel/DYFCkR_uweq/" data-link-thumb="assets/thumbs/ck-1.jpg" data-link-label="Watch the euphoria reel ↗" data-link2="https://www.tiktok.com/t/ZTyvdUUXr/" data-link-thumb2="assets/thumbs/ck-2.jpg" data-link-label2="Watch on TikTok ↗" data-link3="https://www.tiktok.com/@ninonrambaud/video/7613463817728707862" data-link-thumb3="assets/thumbs/ck-3.jpg" data-link-label3="Euphoria Elixirs collab ↗" data-link4="https://www.tiktok.com/t/ZTyvRbjs5/" data-link-thumb4="assets/thumbs/ck-4.jpg" data-link-label4="Euphoria Ulta collab ↗" data-link5="https://www.tiktok.com/t/ZTyvRGXs2/" data-link-thumb5="assets/thumbs/ck-5.jpg" data-link-label5="Euphoria NYFW moment ↗" data-link6="https://www.tiktok.com/t/ZTyvRfq6s/" data-link-thumb6="assets/thumbs/ck-6.jpg" data-link-label6="Euphoria vanilla edit ↗" data-link7="https://www.tiktok.com/t/ZTyvRW4MT/" data-link-thumb7="assets/thumbs/ck-7.jpg" data-link-label7="Euphoria confidence edit ↗">
+          <div class="card-art tall-art bottle-art"><img src="assets/ck-pocket.jpg" alt="Calvin Klein Euphoria bottle in back pocket"></div>
+          <div class="card-body">
+            <div class="card-brand">Calvin Klein</div>
+            <h3>Influencer operations at scale</h3>
+            <p>At Qulture, I run daily publishing and community for Calvin Klein Fragrances — the always-on engine behind campaign moments.</p>
+            <div class="tags"><span class="tag">influencer</span></div>
+            <div class="details"><div class="details-inner">
+              <h4>What I did</h4>
+              <ul>
+                <li>Own daily publishing and community management across Instagram, Facebook, TikTok, and YouTube</li>
+                <li>Manage editorial calendars end-to-end, aligning influencer partnerships, PR moments, and campaign launches</li>
+                <li>Develop creator briefs and ambassador guidelines for influencer activations</li>
+                <li>Built repeatable workflows for talent sourcing, contracting, and content approvals — no chaos, just output</li>
+              </ul>
+              <div class="card-media-note">📹 creator video drops here soon</div>
+            </div></div>
+            <span class="expand-pill">+ details</span>
+          </div>
+        </article>
+
+                <!-- Card 7: Reporting & Insights -->
         <article class="card" data-tags="insights">
           <div class="card-art tall-art"><img src="assets/report-mjf-top-posts.png" alt="Marc Jacobs Fragrances December 2024 top-performing posts report"></div>
           <div class="card-body">
@@ -534,58 +529,66 @@
           </div>
         </article>
 
-        <!-- Card 7: Penhaligon's -->
-        <article class="card" data-tags="influencer insights" data-link="https://www.tiktok.com/t/ZTyvdjqxD/" data-link-thumb="assets/thumbs/pen-1.jpg" data-link-label="Watch the Duchess Rose unboxing ↗" data-link2="https://www.tiktok.com/t/ZTyvdPdvw/" data-link-thumb2="assets/thumbs/pen-2.jpg" data-link-label2="Watch the Portraits reveal ↗" data-link3="https://www.tiktok.com/t/ZTyvdUsSg/" data-link-thumb3="assets/thumbs/pen-3.jpg" data-link-label3="Watch the Vra Vra Vroom review ↗" data-link4="https://www.tiktok.com/t/ZTyvR5GsT/" data-link-thumb4="assets/thumbs/pen-4.jpg" data-link-label4="Portraits sponsored edit ↗" data-link5="https://www.tiktok.com/t/ZTyvRaYat/" data-link-thumb5="assets/thumbs/pen-5.jpg" data-link-label5="Mr. Sam paid partnership ↗">
-          <div class="card-art tall-art"><img src="assets/penhaligons-dandy.jpg" alt="Penhaligon's A London Dandy perfume"></div>
+                <!-- Card 8: Samsung US -->
+        <article class="card" data-tags="community insights">
+          <div class="card-art"><img src="assets/samsung-highlights.png" alt="Samsung community management highlights — December"></div>
           <div class="card-body">
-            <div class="card-brand">Penhaligon's</div>
-            <h3>Influencer seeding for a heritage fragrance house</h3>
-            <p>Ran end-to-end influencer seeding for the Portraits collection across the UK — sourcing, vetting, outreach, gifting, and brand approvals.</p>
-            <div class="tags"><span class="tag">influencer</span><span class="tag">insights</span></div>
+            <div class="card-brand">Samsung US</div>
+            <h3>Community management that joins the conversation</h3>
+            <p>At Ogilvy, I grew Samsung US followers 34% and engagement 21% — by showing up where the brand could credibly join in.</p>
+            <div class="tags"><span class="tag">community</span><span class="tag">insights</span></div>
             <div class="details"><div class="details-inner">
               <h4>What I did</h4>
               <ul>
-                <li>Built and ran the seeding engine for Portraits, Portraits Intense, and Halfeti</li>
-                <li>Sourced and vetted 100+ UK creators on engagement rate and audience footprint before matching scents to personas</li>
-                <li>Managed outreach, opt-ins, gifting logistics, and brand approval rounds end to end</li>
-                <li>Wrote creator briefs for new collection launches — conversational, social-native content guidance with clear do's and don'ts, tagging, and disclosure</li>
+                <li>Led real-time community engagement across Instagram, Facebook, TikTok, YouTube, LinkedIn, and Pinterest</li>
+                <li>Cut response time 40% and lifted sentiment 22% through faster, sharper replies</li>
+                <li>Monitored influencer content to spot moments for social amplification</li>
+                <li>Surfaced comment opportunities on creator posts and drafted response options matched to each moment's tone</li>
               </ul>
               <h4>Highlights</h4>
               <ul>
-                <li>Creator-first matching across the collection — from Duchess Rose to Lord George to Halfeti</li>
+                <li>Martha Stewart's Frame TV and martini-fridge posts: "Martha-tinis," Art Mode explainers, and collab-of-a-lifetime energy</li>
+                <li>91 bespoke community engagements in December alone — including the 28.2K-like Victoria Beckham moment</li>
               </ul>
               <div class="card-gallery">
-                <img src="assets/penhaligons-cut-1.jpg" alt="Penhaligon's The Cut perfume">
-                <img src="assets/penhaligons-cut-2.jpg" alt="Penhaligon's The Cut perfume product shot">
+                <img src="assets/samsung-cm-options.png" alt="Samsung community management comment options for Martha Stewart posts">
               </div>
             </div></div>
             <span class="expand-pill">+ details</span>
           </div>
         </article>
 
-        <!-- Card 8: Calvin Klein -->
-        <article class="card" data-tags="influencer" data-link="https://www.instagram.com/reel/DYFCkR_uweq/" data-link-thumb="assets/thumbs/ck-1.jpg" data-link-label="Watch the euphoria reel ↗" data-link2="https://www.tiktok.com/t/ZTyvdUUXr/" data-link-thumb2="assets/thumbs/ck-2.jpg" data-link-label2="Watch on TikTok ↗" data-link3="https://www.tiktok.com/@ninonrambaud/video/7613463817728707862" data-link-thumb3="assets/thumbs/ck-3.jpg" data-link-label3="Euphoria Elixirs collab ↗" data-link4="https://www.tiktok.com/t/ZTyvRbjs5/" data-link-thumb4="assets/thumbs/ck-4.jpg" data-link-label4="Euphoria Ulta collab ↗" data-link5="https://www.tiktok.com/t/ZTyvRGXs2/" data-link-thumb5="assets/thumbs/ck-5.jpg" data-link-label5="Euphoria NYFW moment ↗" data-link6="https://www.tiktok.com/t/ZTyvRfq6s/" data-link-thumb6="assets/thumbs/ck-6.jpg" data-link-label6="Euphoria vanilla edit ↗" data-link7="https://www.tiktok.com/t/ZTyvRW4MT/" data-link-thumb7="assets/thumbs/ck-7.jpg" data-link-label7="Euphoria confidence edit ↗">
-          <div class="card-art tall-art"><img src="assets/thumbs/ck-1.jpg" alt="Creator holding Calvin Klein Euphoria"></div>
+                <!-- Card 9: Barilla -->
+        <article class="card" data-tags="community">
+          <div class="card-art"><img src="assets/barilla-roundup-cozy.png" alt="Barilla Weekly Roundup — Cozy Meals week"></div>
           <div class="card-body">
-            <div class="card-brand">Calvin Klein</div>
-            <h3>Influencer operations at scale</h3>
-            <p>At Qulture, I run daily publishing and community for Calvin Klein Fragrances — the always-on engine behind campaign moments.</p>
-            <div class="tags"><span class="tag">influencer</span></div>
+            <div class="card-brand">Barilla</div>
+            <h3>Weekly community roundups</h3>
+            <p>A standing community ritual: celebrating the week's best brand moments and turning tags into UGC.</p>
+            <div class="tags"><span class="tag">community</span></div>
             <div class="details"><div class="details-inner">
               <h4>What I did</h4>
               <ul>
-                <li>Own daily publishing and community management across Instagram, Facebook, TikTok, and YouTube</li>
-                <li>Manage editorial calendars end-to-end, aligning influencer partnerships, PR moments, and campaign launches</li>
-                <li>Develop creator briefs and ambassador guidelines for influencer activations</li>
-                <li>Built repeatable workflows for talent sourcing, contracting, and content approvals — no chaos, just output</li>
+                <li>At We Are Social, owned daily publishing and community management for Barilla US</li>
+                <li>Identified emerging platform trends and cultural moments, contributing to 25% ROI growth across campaigns</li>
+                <li>Produced weekly channel highlights for client view — wins, themes, and UGC opportunities</li>
+                <li>Tracked what the community was already posting and folded it back into the brand's story</li>
               </ul>
-              <div class="card-media-note">📹 creator video drops here soon</div>
+              <h4>Highlights</h4>
+              <ul>
+                <li>"Cozy Meals" week: cold-weather cooking content the community was already making, amplified by the brand</li>
+                <li>"Tortellini Tot" week: a TikToker cooking for 100+ college kids posted in a matching Barilla onesie — and DM'd asking to buy one</li>
+              </ul>
+              <div class="card-gallery">
+                <img src="assets/barilla-roundup-tortellini.png" alt="Barilla Weekly Roundup — Tortellini Tot week">
+                <img src="assets/barilla-top-content.png" alt="Barilla top performing content by platform">
+              </div>
             </div></div>
             <span class="expand-pill">+ details</span>
           </div>
         </article>
 
-        <!-- Card 9: The viral comment -->
+                <!-- Card 10: The viral comment -->
         <article class="card" data-tags="community social-first">
           <div class="card-art"><img src="assets/samsung-vb-comment.png" alt="Samsung's 28.2K-like comment on Victoria Beckham's post"></div>
           <div class="card-body">
@@ -743,6 +746,7 @@
   function openModal(card){
     const artSrc = card.querySelector('.card-art').innerHTML;
     document.getElementById('modalArt').innerHTML = artSrc;
+    document.getElementById('modalArt').className = 'modal-art' + (card.querySelector('.card-art').classList.contains('bottle-art') ? ' bottle' : '');
     document.getElementById('modalBrand').textContent = card.querySelector('.card-brand').textContent;
     document.getElementById('modalTitle').textContent = card.querySelector('.card-body h3').textContent;
     const summaryEl = card.querySelector('.card-body > p');
