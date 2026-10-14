@@ -167,6 +167,7 @@
   .card-art.tall-art{height:340px}
   .card-art.bottle-art{height:460px;background:#141414}
   .card-art.bottle-art img{object-fit:contain}
+  .card-art.ck-beauty img{object-position:center 20%}
   .modal-art.bottle{background:#141414}
   .modal-art.bottle img{object-fit:contain}
   .lightbox-backdrop{position:fixed;inset:0;background:rgba(10,10,10,.92);z-index:200;
@@ -174,6 +175,8 @@
   .lightbox-backdrop.open{display:flex}
   .lightbox-backdrop img{max-width:94vw;max-height:90vh;border-radius:14px;
     border:3px solid var(--line);box-shadow:6px 6px 0 rgba(0,0,0,.35)}
+  .lightbox-backdrop video{max-width:94vw;max-height:88vh;border-radius:14px;
+    border:3px solid var(--line);box-shadow:6px 6px 0 rgba(0,0,0,.35);background:#000}
   .lightbox-backdrop .modal-close{position:absolute;top:18px;right:22px}
   .best-rest-heading{font-family:'Anton';font-size:1.15rem;letter-spacing:.04em;
     margin:22px 0 4px;color:var(--ink);text-transform:uppercase}
@@ -486,7 +489,7 @@
 
                 <!-- Card 6: Calvin Klein -->
         <article class="card" data-tags="influencer" data-featured="3" data-link="https://www.instagram.com/reel/DYFCkR_uweq/" data-link-thumb="assets/thumbs/ck-1.jpg" data-link-label="Watch the euphoria reel ↗" data-link2="https://www.tiktok.com/t/ZTyvdUUXr/" data-link-thumb2="assets/thumbs/ck-2.jpg" data-link-label2="Watch on TikTok ↗" data-link3="https://www.tiktok.com/@ninonrambaud/video/7613463817728707862" data-link-thumb3="assets/thumbs/ck-3.jpg" data-link-label3="Euphoria Elixirs collab ↗" data-link4="https://www.tiktok.com/t/ZTyvRbjs5/" data-link-thumb4="assets/thumbs/ck-4.jpg" data-link-label4="Euphoria Ulta collab ↗" data-link5="https://www.tiktok.com/t/ZTyvRGXs2/" data-link-thumb5="assets/thumbs/ck-5.jpg" data-link-label5="Euphoria NYFW moment ↗" data-link6="https://www.tiktok.com/t/ZTyvRfq6s/" data-link-thumb6="assets/thumbs/ck-6.jpg" data-link-label6="Euphoria vanilla edit ↗" data-link7="https://www.tiktok.com/t/ZTyvRW4MT/" data-link-thumb7="assets/thumbs/ck-7.jpg" data-link-label7="Euphoria confidence edit ↗">
-          <div class="card-art tall-art bottle-art"><img src="assets/ck-hero.png" alt="Calvin Klein Euphoria — pink bottle beauty shot"></div>
+          <div class="card-art tall-art ck-beauty"><img src="assets/ck-hero.png" alt="Calvin Klein Euphoria — pink bottle beauty shot"></div>
           <div class="card-body">
             <div class="card-brand">Calvin Klein</div>
             <h3>Influencer operations at scale</h3>
@@ -730,6 +733,7 @@
 <div class="lightbox-backdrop" id="lightboxBackdrop" aria-hidden="true">
   <button class="modal-close" id="lightboxClose" aria-label="Close">✕</button>
   <img id="lightboxImg" alt="Expanded image">
+  <video id="lightboxVideo" controls playsinline style="display:none"></video>
 </div>
 
 <script>
@@ -838,21 +842,39 @@
     card.addEventListener('click', () => openModal(card));
   });
 
-  // Lightbox — click any gallery image to expand it
+  // Lightbox — click any gallery image or video to expand it
   const lightbox = document.getElementById('lightboxBackdrop');
   const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxVideo = document.getElementById('lightboxVideo');
   function openLightbox(src, alt){
+    lightboxVideo.pause();
+    lightboxVideo.removeAttribute('src');
+    lightboxVideo.style.display = 'none';
+    lightboxImg.style.display = 'block';
     lightboxImg.src = src;
     lightboxImg.alt = alt || 'Expanded image';
     lightbox.classList.add('open');
     lightbox.setAttribute('aria-hidden','false');
   }
+  function openLightboxVideo(src){
+    lightboxImg.removeAttribute('src');
+    lightboxImg.style.display = 'none';
+    lightboxVideo.style.display = 'block';
+    lightboxVideo.src = src;
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden','false');
+    lightboxVideo.play().catch(()=>{});
+  }
   function closeLightbox(){
     lightbox.classList.remove('open');
     lightbox.setAttribute('aria-hidden','true');
-    lightboxImg.src = '';
+    lightboxImg.removeAttribute('src');
+    lightboxVideo.pause();
+    lightboxVideo.removeAttribute('src');
   }
   document.addEventListener('click', (e) => {
+    const vid = e.target.closest('.card-gallery video');
+    if (vid) { e.stopPropagation(); e.preventDefault(); openLightboxVideo(vid.currentSrc || vid.src); return; }
     const img = e.target.closest('.card-gallery img');
     if (img) { e.stopPropagation(); openLightbox(img.src, img.alt); }
   });
