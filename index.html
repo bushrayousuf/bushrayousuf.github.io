@@ -126,6 +126,10 @@
 
   /* ---------- cards ---------- */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px}
+  .grid-subhead{grid-column:1/-1;font-family:'Anton';font-size:1.4rem;letter-spacing:.05em;
+    text-transform:uppercase;margin:26px 0 -6px;display:flex;align-items:center;gap:12px}
+  .grid-subhead::after{content:'';flex:1;height:3px;background:var(--line);border-radius:99px}
+  .grid-subhead .script{font-family:'Parisienne';text-transform:none;font-size:1.6rem}
   .card{background:var(--card);border:2.5px solid var(--line);border-radius:var(--radius);
     box-shadow:7px 7px 0 var(--shadowc);overflow:hidden;cursor:pointer;
     transition:transform .16s ease,box-shadow .16s ease;display:flex;flex-direction:column}
@@ -165,6 +169,15 @@
   .card-art.bottle-art img{object-fit:contain}
   .modal-art.bottle{background:#141414}
   .modal-art.bottle img{object-fit:contain}
+  .lightbox-backdrop{position:fixed;inset:0;background:rgba(10,10,10,.92);z-index:200;
+    display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+  .lightbox-backdrop.open{display:flex}
+  .lightbox-backdrop img{max-width:94vw;max-height:90vh;border-radius:14px;
+    border:3px solid var(--line);box-shadow:6px 6px 0 rgba(0,0,0,.35)}
+  .lightbox-backdrop .modal-close{position:absolute;top:18px;right:22px}
+  .best-rest-heading{font-family:'Anton';font-size:1.15rem;letter-spacing:.04em;
+    margin:22px 0 4px;color:var(--ink);text-transform:uppercase}
+  .best-rest-heading::before{content:'✦ ';color:var(--accent)}
   .card-gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
   .card-gallery img{width:100%;height:210px;object-fit:cover;border:2px solid var(--line);
     border-radius:12px;box-shadow:3px 3px 0 var(--shadowc);cursor:zoom-in;
@@ -313,7 +326,7 @@
     <div class="wrap">
       <p class="sec-label">01 · selected work</p>
       <h2 class="sec-title">THE <span class="script">good</span> STUFF</h2>
-      <p class="sec-sub">Tap any card to open the full story. Filter by discipline — campaign visuals and creator videos dropping in soon.</p>
+      <p class="sec-sub">Tap any card to open the full story. Images click to expand.</p>
       <div class="filters" id="filters">
         <button class="filter active" data-filter="all">all</button>
         <button class="filter" data-filter="influencer">influencer</button>
@@ -375,7 +388,6 @@
               <div class="card-gallery">
                 <img src="assets/mjf-flatlay-2.png" alt="Perfect Absolute in-my-bag flatlay">
                 <img src="assets/mjf-perfume.jpg" alt="Perfect Absolute red bottle held in hand">
-                <video controls muted playsinline preload="metadata" src="assets/mjf-remarcable.mp4"></video>
                 <video controls muted playsinline preload="metadata" src="assets/mjf-absolute-bottle.mp4"></video>
               </div>
             </div></div>
@@ -398,17 +410,18 @@
               </ul>
               <div class="card-gallery">
                 <img src="assets/jw-sabrina-1.png" alt="Sabrina Carpenter for Johnnie Walker — 'Here's to making new friends'">
-                <img src="assets/jw-sabrina-piano.jpg" alt="Sabrina Carpenter with Johnnie Walker Black Label at the piano">
                 <img src="assets/jw-polka-portrait.jpg" alt="Campaign portrait — polka dot suit and emerald necklace">
                 <video controls muted playsinline preload="metadata" src="assets/jw-sabrina-closeup.mp4"></video>
                 <video controls muted playsinline preload="metadata" src="assets/jw-blue-label.mp4"></video>
+                <video controls muted playsinline preload="metadata" src="assets/jw-sabrina-title.mp4"></video>
+              </div>
+              <h4 class="best-rest-heading">Best of the rest</h4>
+              <div class="card-gallery">
                 <video controls muted playsinline preload="metadata" src="assets/jw-polka-bts.mp4"></video>
                 <video controls muted playsinline preload="metadata" src="assets/jw-pour.mp4"></video>
                 <video controls muted playsinline preload="metadata" src="assets/jw-polka-bts-2.mp4"></video>
-                <video controls muted playsinline preload="metadata" src="assets/jw-sabrina-title.mp4"></video>
                 <img src="assets/jw-asset-overview.png" alt="Johnnie Walker July 2025 asset overview — Global and US campaign grid">
               </div>
-              <div class="card-media-note">📹 more creator video drops here soon</div>
             </div></div>
             <span class="expand-pill">+ details</span>
           </div>
@@ -427,6 +440,7 @@
               <ul>
                 <li>Developed social creative for Pride 2025</li>
                 <li>#PerfectPride moments with creators Adrienne Reau and Jeauni Cassanova</li>
+                <li>Pride campaign featuring Tommy Dorfman</li>
               </ul>
               <div class="card-gallery">
                 <img src="assets/mjf-perfect-taxi.png" alt="Perfect Marc Jacobs Pride — taxi with Jeauni Cassanova">
@@ -442,7 +456,7 @@
         </article>
 
                 <!-- Card 5: Penhaligon's -->
-        <article class="card" data-tags="influencer insights" data-link="https://www.tiktok.com/t/ZTyvdjqxD/" data-link-thumb="assets/thumbs/pen-1.jpg" data-link-label="Watch the Duchess Rose unboxing ↗" data-link2="https://www.tiktok.com/t/ZTyvdPdvw/" data-link-thumb2="assets/thumbs/pen-2.jpg" data-link-label2="Watch the Portraits reveal ↗" data-link3="https://www.tiktok.com/t/ZTyvdUsSg/" data-link-thumb3="assets/thumbs/pen-3.jpg" data-link-label3="Watch the Vra Vra Vroom review ↗" data-link4="https://www.tiktok.com/t/ZTyvR5GsT/" data-link-thumb4="assets/thumbs/pen-4.jpg" data-link-label4="Portraits sponsored edit ↗" data-link5="https://www.tiktok.com/t/ZTyvRaYat/" data-link-thumb5="assets/thumbs/pen-5.jpg" data-link-label5="Mr. Sam paid partnership ↗">
+        <article class="card" data-tags="influencer insights" data-featured="3" data-link="https://www.tiktok.com/t/ZTyvdjqxD/" data-link-thumb="assets/thumbs/pen-1.jpg" data-link-label="Watch the Duchess Rose unboxing ↗" data-link2="https://www.tiktok.com/t/ZTyvdPdvw/" data-link-thumb2="assets/thumbs/pen-2.jpg" data-link-label2="Watch the Portraits reveal ↗" data-link3="https://www.tiktok.com/t/ZTyvdUsSg/" data-link-thumb3="assets/thumbs/pen-3.jpg" data-link-label3="Watch the Vra Vra Vroom review ↗" data-link4="https://www.tiktok.com/t/ZTyvR5GsT/" data-link-thumb4="assets/thumbs/pen-4.jpg" data-link-label4="Portraits sponsored edit ↗" data-link5="https://www.tiktok.com/t/ZTyvRaYat/" data-link-thumb5="assets/thumbs/pen-5.jpg" data-link-label5="Mr. Sam paid partnership ↗">
           <div class="card-art tall-art bottle-art"><img src="assets/penhaligons-dandy.jpg" alt="Penhaligon's A London Dandy perfume"></div>
           <div class="card-body">
             <div class="card-brand">Penhaligon's</div>
@@ -471,8 +485,8 @@
         </article>
 
                 <!-- Card 6: Calvin Klein -->
-        <article class="card" data-tags="influencer" data-link="https://www.instagram.com/reel/DYFCkR_uweq/" data-link-thumb="assets/thumbs/ck-1.jpg" data-link-label="Watch the euphoria reel ↗" data-link2="https://www.tiktok.com/t/ZTyvdUUXr/" data-link-thumb2="assets/thumbs/ck-2.jpg" data-link-label2="Watch on TikTok ↗" data-link3="https://www.tiktok.com/@ninonrambaud/video/7613463817728707862" data-link-thumb3="assets/thumbs/ck-3.jpg" data-link-label3="Euphoria Elixirs collab ↗" data-link4="https://www.tiktok.com/t/ZTyvRbjs5/" data-link-thumb4="assets/thumbs/ck-4.jpg" data-link-label4="Euphoria Ulta collab ↗" data-link5="https://www.tiktok.com/t/ZTyvRGXs2/" data-link-thumb5="assets/thumbs/ck-5.jpg" data-link-label5="Euphoria NYFW moment ↗" data-link6="https://www.tiktok.com/t/ZTyvRfq6s/" data-link-thumb6="assets/thumbs/ck-6.jpg" data-link-label6="Euphoria vanilla edit ↗" data-link7="https://www.tiktok.com/t/ZTyvRW4MT/" data-link-thumb7="assets/thumbs/ck-7.jpg" data-link-label7="Euphoria confidence edit ↗">
-          <div class="card-art tall-art bottle-art"><img src="assets/ck-pocket.jpg" alt="Calvin Klein Euphoria bottle in back pocket"></div>
+        <article class="card" data-tags="influencer" data-featured="3" data-link="https://www.instagram.com/reel/DYFCkR_uweq/" data-link-thumb="assets/thumbs/ck-1.jpg" data-link-label="Watch the euphoria reel ↗" data-link2="https://www.tiktok.com/t/ZTyvdUUXr/" data-link-thumb2="assets/thumbs/ck-2.jpg" data-link-label2="Watch on TikTok ↗" data-link3="https://www.tiktok.com/@ninonrambaud/video/7613463817728707862" data-link-thumb3="assets/thumbs/ck-3.jpg" data-link-label3="Euphoria Elixirs collab ↗" data-link4="https://www.tiktok.com/t/ZTyvRbjs5/" data-link-thumb4="assets/thumbs/ck-4.jpg" data-link-label4="Euphoria Ulta collab ↗" data-link5="https://www.tiktok.com/t/ZTyvRGXs2/" data-link-thumb5="assets/thumbs/ck-5.jpg" data-link-label5="Euphoria NYFW moment ↗" data-link6="https://www.tiktok.com/t/ZTyvRfq6s/" data-link-thumb6="assets/thumbs/ck-6.jpg" data-link-label6="Euphoria vanilla edit ↗" data-link7="https://www.tiktok.com/t/ZTyvRW4MT/" data-link-thumb7="assets/thumbs/ck-7.jpg" data-link-label7="Euphoria confidence edit ↗">
+          <div class="card-art tall-art bottle-art"><img src="assets/ck-hero.png" alt="Calvin Klein Euphoria — pink bottle beauty shot"></div>
           <div class="card-body">
             <div class="card-brand">Calvin Klein</div>
             <h3>Influencer operations at scale</h3>
@@ -486,13 +500,13 @@
                 <li>Develop creator briefs and ambassador guidelines for influencer activations</li>
                 <li>Built repeatable workflows for talent sourcing, contracting, and content approvals — no chaos, just output</li>
               </ul>
-              <div class="card-media-note">📹 creator video drops here soon</div>
             </div></div>
             <span class="expand-pill">+ details</span>
           </div>
         </article>
 
                 <!-- Card 7: Reporting & Insights -->
+        <div class="grid-subhead">✦ Analytics</div>
         <article class="card" data-tags="insights">
           <div class="card-art tall-art"><img src="assets/report-mjf-top-posts.png" alt="Marc Jacobs Fragrances December 2024 top-performing posts report"></div>
           <div class="card-body">
@@ -530,6 +544,7 @@
         </article>
 
                 <!-- Card 8: Samsung US -->
+        <div class="grid-subhead">✦ <span class="script">previous</span> work</div>
         <article class="card" data-tags="community insights">
           <div class="card-art"><img src="assets/samsung-highlights.png" alt="Samsung community management highlights — December"></div>
           <div class="card-body">
@@ -590,7 +605,7 @@
 
                 <!-- Card 10: The viral comment -->
         <article class="card" data-tags="community social-first">
-          <div class="card-art"><img src="assets/samsung-vb-comment.png" alt="Samsung's 28.2K-like comment on Victoria Beckham's post"></div>
+          <div class="card-art tall-art"><img src="assets/samsung-vb-post-full.png" alt="Victoria Beckham's post with David Beckham under the TV and Samsung's viral comment"></div>
           <div class="card-body">
             <div class="card-brand">Samsung US</div>
             <h3>The 28K-like comment</h3>
@@ -604,8 +619,12 @@
               </ul>
               <h4>The comment</h4>
               <ul>
-                <li>"*Disclaimer: Not all Frame TVs come with this electrician." — 28,807 likes</li>
+                <li>"*Disclaimer: Not all Frame TVs come with this electrician." — 28.5K likes</li>
               </ul>
+              <div class="card-gallery">
+                <img src="assets/samsung-vb-comments-new.png" alt="Samsung's 28.5K-like comment thread">
+                <img src="assets/samsung-vb-comment.png" alt="Samsung's comment on Victoria Beckham's post">
+              </div>
             </div></div>
             <span class="expand-pill">+ details</span>
           </div>
@@ -708,6 +727,10 @@
     </div>
   </div>
 </div>
+<div class="lightbox-backdrop" id="lightboxBackdrop" aria-hidden="true">
+  <button class="modal-close" id="lightboxClose" aria-label="Close">✕</button>
+  <img id="lightboxImg" alt="Expanded image">
+</div>
 
 <script>
   // Duplicate ticker content for a seamless loop
@@ -738,7 +761,19 @@
       const show = f === 'all' || c.dataset.tags.split(' ').includes(f);
       c.classList.toggle('hidden', !show);
     });
+    updateSubheads();
   }));
+  const subheads = document.querySelectorAll('.grid-subhead');
+  function updateSubheads(){
+    subheads.forEach(sh => {
+      let el = sh.nextElementSibling, any = false;
+      while (el && !el.classList.contains('grid-subhead')){
+        if (el.classList.contains('card') && !el.classList.contains('hidden')) { any = true; break; }
+        el = el.nextElementSibling;
+      }
+      sh.classList.toggle('hidden', !any);
+    });
+  }
 
   // Case-study modal — click any card to open the full story
   const backdrop = document.getElementById('modalBackdrop');
@@ -762,7 +797,13 @@
       if (!url) break;
       linkDefs.push([url, card.dataset['linkLabel' + suffix] || 'View link ↗', card.dataset['linkThumb' + suffix] || '']);
     }
-    linkDefs.forEach(([url, label, thumb]) => {
+    linkDefs.forEach(([url, label, thumb], idx) => {
+      if (card.dataset.featured && idx === parseInt(card.dataset.featured, 10)){
+        const h = document.createElement('h4');
+        h.className = 'best-rest-heading';
+        h.textContent = 'Best of the rest';
+        linksBox.appendChild(h);
+      }
       const a = document.createElement('a');
       a.className = 'link-card';
       a.href = url;
@@ -796,6 +837,28 @@
   cards.forEach(card => {
     card.addEventListener('click', () => openModal(card));
   });
+
+  // Lightbox — click any gallery image to expand it
+  const lightbox = document.getElementById('lightboxBackdrop');
+  const lightboxImg = document.getElementById('lightboxImg');
+  function openLightbox(src, alt){
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || 'Expanded image';
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden','false');
+  }
+  function closeLightbox(){
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden','true');
+    lightboxImg.src = '';
+  }
+  document.addEventListener('click', (e) => {
+    const img = e.target.closest('.card-gallery img');
+    if (img) { e.stopPropagation(); openLightbox(img.src, img.alt); }
+  });
+  document.getElementById('lightboxClose').addEventListener('click', (e) => { e.stopPropagation(); closeLightbox(); });
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
 
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
